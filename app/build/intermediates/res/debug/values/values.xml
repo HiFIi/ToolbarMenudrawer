@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
-    <!-- From: file:/home/kyler/Downloads/ToolbarMenudrawer/app/src/main/res/values/arrays.xml -->
+    <!-- From: file:/home/kyler/Desktop/ToolbarMenudrawer/app/src/main/res/values/arrays.xml -->
     <eat-comment/>
     <array name="drawable_ids">
         <item>@drawable/android</item>
@@ -14,7 +14,7 @@
         <item>Cake</item>
         <item>Person</item>
     </string-array>
-    <!-- From: file:/home/kyler/Downloads/ToolbarMenudrawer/app/build/intermediates/exploded-aar/com.android.support/appcompat-v7/21.0.0/res/values/values.xml -->
+    <!-- From: file:/home/kyler/Desktop/ToolbarMenudrawer/app/build/intermediates/exploded-aar/com.android.support/appcompat-v7/21.0.0/res/values/values.xml -->
     <eat-comment/>
     <attr format="reference" name="drawerArrowStyle"/>
     <attr format="dimension" name="height"/>
@@ -35,10 +35,10 @@
     <color name="background_floating_material_dark">#ff424242</color>
     <color name="background_floating_material_light">#ffeeeeee</color>
     <color name="background_material_dark">#ff303030</color>
-    <!-- From: file:/home/kyler/Downloads/ToolbarMenudrawer/app/src/main/res/values/colors.xml -->
+    <!-- From: file:/home/kyler/Desktop/ToolbarMenudrawer/app/src/main/res/values/colors.xml -->
     <eat-comment/>
     <color name="background_material_light">#fffafafa</color>
-    <!-- From: file:/home/kyler/Downloads/ToolbarMenudrawer/app/build/intermediates/exploded-aar/com.android.support/appcompat-v7/21.0.0/res/values/values.xml -->
+    <!-- From: file:/home/kyler/Desktop/ToolbarMenudrawer/app/build/intermediates/exploded-aar/com.android.support/appcompat-v7/21.0.0/res/values/values.xml -->
     <eat-comment/>
     <color name="bright_foreground_disabled_material_dark">#80ffffff</color>
     <color name="bright_foreground_disabled_material_light">#80000000</color>
@@ -52,7 +52,7 @@
     <color name="dim_foreground_disabled_material_light">#80323232</color>
     <color name="dim_foreground_material_dark">#ffbebebe</color>
     <color name="dim_foreground_material_light">#ff323232</color>
-    <!-- From: file:/home/kyler/Downloads/ToolbarMenudrawer/app/src/main/res/values/colors.xml -->
+    <!-- From: file:/home/kyler/Desktop/ToolbarMenudrawer/app/src/main/res/values/colors.xml -->
     <eat-comment/>
     <color name="google_search_mockup_theme_actionbar_color">#ff4e6cef</color>
     <color name="google_search_mockup_theme_actionbar_titletextstyle_colorhint">#FFfafafa</color>
@@ -67,7 +67,7 @@
     <color name="google_search_mockup_theme_header_view_view_color">#8C343435</color>
     <color name="google_search_mockup_theme_widget_background_color">#FFE5E5E5</color>
     <color name="google_search_mockup_theme_widget_text_color">#FF303030</color>
-    <!-- From: file:/home/kyler/Downloads/ToolbarMenudrawer/app/build/intermediates/exploded-aar/com.android.support/appcompat-v7/21.0.0/res/values/values.xml -->
+    <!-- From: file:/home/kyler/Desktop/ToolbarMenudrawer/app/build/intermediates/exploded-aar/com.android.support/appcompat-v7/21.0.0/res/values/values.xml -->
     <eat-comment/>
     <color name="highlighted_text_material_dark">#6680cbc4</color>
     <color name="highlighted_text_material_light">#66009688</color>
@@ -80,10 +80,10 @@
     <color name="material_blue_grey_950">#ff21272b</color>
     <color name="material_deep_teal_200">#ff80cbc4</color>
     <color name="material_deep_teal_500">#ff009688</color>
-    <!-- From: file:/home/kyler/Downloads/ToolbarMenudrawer/app/src/main/res/values/colors.xml -->
+    <!-- From: file:/home/kyler/Desktop/ToolbarMenudrawer/app/src/main/res/values/colors.xml -->
     <eat-comment/>
     <color name="navigation_drawer_item_text">#FF707070</color>
-    <!-- From: file:/home/kyler/Downloads/ToolbarMenudrawer/app/build/intermediates/exploded-aar/com.android.support/appcompat-v7/21.0.0/res/values/values.xml -->
+    <!-- From: file:/home/kyler/Desktop/ToolbarMenudrawer/app/build/intermediates/exploded-aar/com.android.support/appcompat-v7/21.0.0/res/values/values.xml -->
     <eat-comment/>
     <color name="primary_dark_material_dark">#ff000000</color>
     <color name="primary_dark_material_light">#ff757575</color>
@@ -168,10 +168,10 @@
     <item name="dialog_fixed_width_minor" type="dimen">320dp</item>
     <item format="float" name="disabled_alpha_material_dark" type="dimen">0.30</item>
     <item format="float" name="disabled_alpha_material_light" type="dimen">0.26</item>
-    <!-- From: file:/home/kyler/Downloads/ToolbarMenudrawer/app/src/main/res/values/dimens.xml -->
+    <!-- From: file:/home/kyler/Desktop/ToolbarMenudrawer/app/src/main/res/values/dimens.xml -->
     <eat-comment/>
     <dimen name="nav_drawer_width_custom">290dp</dimen>
-    <!-- From: file:/home/kyler/Downloads/ToolbarMenudrawer/app/build/intermediates/exploded-aar/com.android.support/appcompat-v7/21.0.0/res/values/values.xml -->
+    <!-- From: file:/home/kyler/Desktop/ToolbarMenudrawer/app/build/intermediates/exploded-aar/com.android.support/appcompat-v7/21.0.0/res/values/values.xml -->
     <eat-comment/>
     <item name="action_bar_activity_content" type="id"/>
     <item name="action_bar_spinner" type="id"/>
@@ -198,7 +198,7 @@
     <string name="abc_searchview_description_voice">Voice search</string>
     <string name="abc_shareactionprovider_share_with">Share with</string>
     <string name="abc_shareactionprovider_share_with_application">Share with %s</string>
-    <!-- From: file:/home/kyler/Downloads/ToolbarMenudrawer/app/src/main/res/values/strings.xml -->
+    <!-- From: file:/home/kyler/Desktop/ToolbarMenudrawer/app/src/main/res/values/strings.xml -->
     <eat-comment/>
     <string name="app_name">ToolbarMenudrawer Examples</string>
     <string name="blank_text"/>
@@ -212,7 +212,7 @@
     <string name="option_two">Test option 2</string>
     <string name="settings">Settings</string>
     <string name="weather">Weather</string>
-    <!-- From: file:/home/kyler/Downloads/ToolbarMenudrawer/app/build/intermediates/exploded-aar/com.android.support/appcompat-v7/21.0.0/res/values/values.xml -->
+    <!-- From: file:/home/kyler/Desktop/ToolbarMenudrawer/app/build/intermediates/exploded-aar/com.android.support/appcompat-v7/21.0.0/res/values/values.xml -->
     <eat-comment/>
     <style name="Base.TextAppearance.AppCompat" parent="android:TextAppearance">
         <item name="android:textColor">?android:textColorPrimary</item>

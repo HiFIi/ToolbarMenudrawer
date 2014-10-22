@@ -49,7 +49,7 @@
             android:id="@+id/toolbar"
             android:layout_width="match_parent"
             android:layout_height="?attr/actionBarSize"
-            android:background="#3f51b5"
+            android:background="#5677fc"
             android:gravity="top"
             android:minHeight="56.0dip"
             app:popupTheme="@style/ThemeOverlay.AppCompat.Light"
@@ -57,4 +57,4 @@
     </LinearLayout>
 
 </FrameLayout>
-<!-- From: file:/home/kyler/Downloads/ToolbarMenudrawer/app/src/main/res/layout-v19/toolbarmenudrawer.xml -->
+<!-- From: file:/home/kyler/Desktop/ToolbarMenudrawer/app/src/main/res/layout-v19/toolbarmenudrawer.xml -->

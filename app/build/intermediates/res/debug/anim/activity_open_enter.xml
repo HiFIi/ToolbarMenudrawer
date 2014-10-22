@@ -38,4 +38,4 @@
         android:interpolator="@interpolator/decelerate_quint"
         android:toYDelta="0" />
 
-</set><!-- From: file:/home/kyler/Downloads/ToolbarMenudrawer/app/src/main/res/anim/activity_open_enter.xml -->
+</set><!-- From: file:/home/kyler/Desktop/ToolbarMenudrawer/app/src/main/res/anim/activity_open_enter.xml -->

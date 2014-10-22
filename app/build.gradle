@@ -5,7 +5,7 @@ android {
     buildToolsVersion "21.0.1"
 
     defaultConfig {
-        applicationId "com.kyler.search.mockup.material"
+        applicationId "com.kyler.toolbarmenudrawer"
         minSdkVersion 19
         targetSdkVersion 21
     }
