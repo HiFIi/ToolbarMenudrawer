@@ -1,0 +1,11 @@
+<resources>
+    <!-- inherit from the material theme -->
+    <style name="ToolbarMenudrawer.Theme" parent="Theme.AppCompat">
+        <item name="android:windowContentOverlay">@null</item>
+        <item name="android:windowActionBarOverlay">true</item>
+        <item name="windowActionBar">false</item>
+        <item name="android:windowBackground">@color/background_material_light</item>
+        <item name="android:windowTranslucentStatus">true</item>
+        <item name="android:fitsSystemWindows">true</item>
+    </style>
+</resources>

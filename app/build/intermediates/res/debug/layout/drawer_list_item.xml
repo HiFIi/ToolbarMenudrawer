@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="utf-8"?>
+<com.kyler.toolbarmenudrawer.ToolbarMenudrawerTextView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:customfontdemo="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/MDText"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:ellipsize="marquee"
+    android:gravity="center_vertical"
+    android:minHeight="64.0dip"
+    android:paddingLeft="18dp"
+    android:singleLine="true"
+    android:textColor="#ff505050"
+    android:textSize="12sp"
+    customfontdemo:fontName="Roboto-Regular.ttf"
+    tools:ignore="RtlSymmetry" /><!-- From: file:/home/kyler/Downloads/ToolbarMenudrawer/app/src/main/res/layout/drawer_list_item.xml -->

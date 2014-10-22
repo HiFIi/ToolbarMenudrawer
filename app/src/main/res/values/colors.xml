@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <color name="background_material_light">#fffafafa</color>
+    <color name="google_search_mockup_theme_widget_text_color">#FF303030</color>
+    <color name="google_search_mockup_theme_widget_background_color">#FFE5E5E5</color>
+    <color name="google_search_mockup_theme_actionbar_color">#ff4e6cef</color>
+    <color name="google_search_mockup_theme_background_color_framelayout">#FF333435</color>
+    <color name="google_search_mockup_theme_drawer_color">#FF333435</color>
+    <color name="google_search_mockup_theme_app_background">#FFF9F9F9</color>
+    <color name="google_search_mockup_theme_drawer_text_color">#FFE7E8E9</color>
+    <color name="google_search_mockup_theme_background_color_misc">#FF464646</color>
+
+    <!-- 55% Transparent -->
+    <color name="google_search_mockup_theme_header_view_view_color">#8C343435</color>
+    <color name="google_search_mockup_theme_drawer_cachecolorhint_color">#FF575757</color>
+
+    <!-- 80% Transparent -->
+    <color name="google_search_mockup_theme_drawer_divider_color">#CC2A2A2A</color>
+    <color name="google_search_mockup_theme_actionbar_titletextstyle_colorhint">#FFfafafa</color>
+    <color name="google_search_mockup_theme_actionbar_titletextstyle_text_color">#FFFAFAFA</color>
+    <color name="navigation_drawer_item_text">#FF707070</color>
+
+</resources>

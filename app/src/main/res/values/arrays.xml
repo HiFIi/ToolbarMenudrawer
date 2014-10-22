@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <string-array name="navigation_main_sections">
+        <item>Android</item>
+        <item>Bugdroid</item>
+        <item>Cake</item>
+        <item>Person</item>
+    </string-array>
+
+    <array name="drawable_ids">
+        <item>@drawable/android</item>
+        <item>@drawable/bugdroid</item>
+        <item>@drawable/cake</item>
+        <item>@drawable/person</item>
+    </array>
+
+</resources>

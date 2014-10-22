@@ -1,0 +1,28 @@
+<resources>
+    <!-- inherit from the material theme -->
+    <style name="ToolbarMenudrawer.Theme" parent="Theme.AppCompat">
+        <item name="colorPrimary">#5677fc</item>
+        <item name="colorPrimaryDark">#455ede</item>
+        <item name="colorAccent">#5677fc</item>
+        <item name="android:windowContentOverlay">@null</item>
+        <item name="android:windowActionBarOverlay">true</item>
+        <item name="windowActionBar">false</item>
+        <item name="android:actionBarStyle">@style/ToolbarMenudrawer.Actionbar.Theme</item>
+        <item name="android:windowBackground">@color/background_material_light</item>
+    </style>
+
+    <style name="ToolbarMenudrawer.Actionbar.Theme" parent="Widget.AppCompat.Light.ActionBar">
+        <item name="android:background">#FF34495e</item>
+        <item name="android:titleTextStyle">
+            @style/ToolbarMenudrawer.ActionBar.TitleTextStyle.Theme
+        </item>
+        <item name="android:height">58.0dip</item>
+        <item name="android:icon">@android:color/transparent</item>
+    </style>
+
+    <style name="ToolbarMenudrawer.ActionBar.TitleTextStyle.Theme" parent="TextAppearance.AppCompat.Widget.ActionBar.Title">
+        <item name="android:textColorHint">@android:color/transparent</item>
+        <item name="android:textColor">@android:color/transparent</item>
+    </style>
+
+</resources>

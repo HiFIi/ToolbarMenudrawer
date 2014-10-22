@@ -1,0 +1,5 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ripple xmlns:android="http://schemas.android.com/apk/res/android"
+    android:color="#afafaf">
+    <item android:drawable="@drawable/drawer"></item>
+</ripple><!-- From: file:/home/kyler/Downloads/ToolbarMenudrawer/app/src/main/res/drawable/ripple.xml -->

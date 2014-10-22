@@ -1,0 +1,21 @@
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <item
+        android:id="@+id/option1"
+        android:title="@string/option_one"
+        app:showAsAction="never" />
+    <item
+        android:id="@+id/option2"
+        android:title="@string/option_two"
+        app:showAsAction="never">
+
+    </item>
+    <item
+        android:id="@+id/option3"
+        android:title="@string/option_three"
+        app:showAsAction="never">
+
+    </item>
+
+</menu>

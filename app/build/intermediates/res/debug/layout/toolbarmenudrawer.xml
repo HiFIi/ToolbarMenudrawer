@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<android.support.v4.widget.DrawerLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/drawer_layout"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#fffafafa"
+    android:fadingEdge="horizontal"
+    android:fitsSystemWindows="true"
+    android:hapticFeedbackEnabled="false"
+    android:overScrollMode="never">
+
+    <FrameLayout
+        android:id="@+id/content_frame"
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent"
+        android:layout_marginTop="?attr/actionBarSize"
+        android:background="#fffafafa"></FrameLayout>
+
+
+    <ListView
+        android:id="@+id/left_drawer"
+        android:layout_width="@dimen/nav_drawer_width_custom"
+        android:layout_height="fill_parent"
+        android:layout_gravity="start"
+        android:background="#fffafafa"
+        android:choiceMode="singleChoice"
+        android:divider="#00000000"
+        android:dividerHeight="1.00dp"
+        android:listSelector="@drawable/drawer"
+        android:longClickable="false"
+        android:orientation="vertical"
+        android:overScrollMode="never"
+        android:scrollbars="none"
+        android:scrollingCache="true" />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_marginTop="?attr/actionBarSize"
+        android:orientation="vertical">
+
+        <android.support.v7.widget.Toolbar
+            android:id="@+id/toolbar"
+            android:layout_width="match_parent"
+            android:layout_height="?attr/actionBarSize"
+            android:background="#3f51b5"
+            app:popupTheme="@style/ThemeOverlay.AppCompat.Light"
+            app:theme="@style/ThemeOverlay.AppCompat.Dark.ActionBar" />
+
+    </LinearLayout>
+</android.support.v4.widget.DrawerLayout><!-- From: file:/home/kyler/Downloads/ToolbarMenudrawer/app/src/main/res/layout/toolbarmenudrawer.xml -->
