@@ -15,7 +15,7 @@
         android:layout_alignParentTop="true"
         android:layout_centerVertical="true"
         android:paddingLeft="16dp"
-        android:paddingTop="2.50dp"
+        android:paddingTop="3dp"
         android:scaleType="fitCenter"
         tools:ignore="RtlSymmetry,ContentDescription" />
 
