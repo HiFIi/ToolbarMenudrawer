@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
-    <!-- From: file:/home/kyler/Desktop/ToolbarMenudrawer/app/build/intermediates/exploded-aar/com.android.support/appcompat-v7/21.0.0/res/values-v21/values.xml -->
+    <!-- From: file:/home/kyler/Downloads/ToolbarMenudrawer/app/build/intermediates/exploded-aar/com.android.support/appcompat-v7/21.0.0/res/values-v21/values.xml -->
     <eat-comment/>
     <style name="Base.TextAppearance.AppCompat" parent="android:TextAppearance.Material"/>
     <style name="Base.TextAppearance.AppCompat.Body1" parent="android:TextAppearance.Material.Body1"/>
@@ -269,7 +269,7 @@
         <item name="android:windowNoTitle">true</item>
         <item name="android:windowActionBar">false</item>
     </style>
-    <!-- From: file:/home/kyler/Desktop/ToolbarMenudrawer/app/src/main/res/values-v21/styles.xml -->
+    <!-- From: file:/home/kyler/Downloads/ToolbarMenudrawer/app/src/main/res/values-v21/styles.xml -->
     <eat-comment/>
     <style name="ToolbarMenudrawer.ActionBar.TitleTextStyle.Theme" parent="TextAppearance.AppCompat.Widget.ActionBar.Title">
         <item name="android:textColorHint">@android:color/transparent</item>
@@ -283,10 +283,10 @@
         <item name="android:height">58.0dip</item>
         <item name="android:icon">@android:color/transparent</item>
     </style>
-    <style name="ToolbarMenudrawer.Theme" parent="Theme.AppCompat">
-        <item name="colorPrimary">#5677fc</item>
-        <item name="colorPrimaryDark">#455ede</item>
-        <item name="colorAccent">#5677fc</item>
+    <style name="ToolbarMenudrawer.Theme" parent="Theme.AppCompat.NoActionBar">
+        <item name="colorPrimary">#303f9f</item>
+        <item name="colorPrimaryDark">#1a237e</item>
+        <item name="colorAccent">#303f9f</item>
         <item name="android:windowContentOverlay">@null</item>
         <item name="android:windowActionBarOverlay">true</item>
         <item name="windowActionBar">false</item>

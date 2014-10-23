@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="utf-8"?>
+<pre-dex-items>
+
+    <item
+        dex="/home/kyler/Downloads/ToolbarMenudrawer/app/build/intermediates/pre-dexed/debug/internal_impl-21.0.0-5f34c9f4dd167ad27b9de8238312a319f983b531.jar"
+        jar="/home/kyler/Downloads/ToolbarMenudrawer/app/build/intermediates/exploded-aar/com.android.support/support-v4/21.0.0/libs/internal_impl-21.0.0.jar"
+        jumboMode="false"
+        revision="21.0.1"
+        sha1="1609e6d42d0480b0f4188e2c29f75388fa12a8f0"/>
+    <item
+        dex="/home/kyler/Downloads/ToolbarMenudrawer/app/build/intermediates/pre-dexed/debug/classes-a12aa4a73aeda0a6c457d7aeab06c9c47e37f2d0.jar"
+        jar="/home/kyler/Downloads/ToolbarMenudrawer/app/build/intermediates/exploded-aar/com.android.support/support-v4/21.0.0/classes.jar"
+        jumboMode="false"
+        revision="21.0.1"
+        sha1="686344a780033e4ba22b926cd225f8d4941247e6"/>
+    <item
+        dex="/home/kyler/Downloads/ToolbarMenudrawer/app/build/intermediates/pre-dexed/debug/support-annotations-21.0.0-beff3111c1e58ed58c1408cad90a58e7a1601414.jar"
+        jar="/home/kyler/Desktop/android-studio/sdk/extras/android/m2repository/com/android/support/support-annotations/21.0.0/support-annotations-21.0.0.jar"
+        jumboMode="false"
+        revision="21.0.1"
+        sha1="1a578b9607b36266c63d43a4fa0ab5664dbe911e"/>
+    <item
+        dex="/home/kyler/Downloads/ToolbarMenudrawer/app/build/intermediates/pre-dexed/debug/classes-a26bd4852fbced589ef042179b4ebadcdf73b1fd.jar"
+        jar="/home/kyler/Downloads/ToolbarMenudrawer/app/build/intermediates/exploded-aar/com.android.support/appcompat-v7/21.0.0/classes.jar"
+        jumboMode="false"
+        revision="21.0.1"
+        sha1="95fd37732ec852e99f07eeb516a3650172f1d136"/>
+
+</pre-dex-items>

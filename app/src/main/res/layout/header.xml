@@ -5,25 +5,24 @@
     android:layout_height="match_parent"
     android:background="#FFfafafa">
 
-    <ImageView
+    <View
         android:id="@+id/imageView1"
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"
+        android:layout_height="190dp"
         android:layout_alignParentRight="true"
         android:layout_alignParentTop="true"
-        android:adjustViewBounds="true"
-        android:scaleType="centerCrop"
-        android:src="@drawable/header_dark_indigo" />
+        android:background="#1a237e" />
 
-    <com.wisemandesigns.android.widgets.CircularImageView
+    <ImageView
         android:id="@+id/circularImageView1"
-        android:layout_width="56dp"
-        android:layout_height="56dp"
+        android:layout_width="64dp"
+        android:layout_height="64dp"
         android:layout_alignBottom="@+id/imageView1"
-        android:layout_alignParentLeft="true"
-        android:layout_marginBottom="12dp"
-        android:layout_marginLeft="6dp"
-        android:layout_marginRight="8dp"
+        android:layout_alignParentStart="true"
+        android:layout_marginBottom="10dp"
+        android:layout_marginLeft="8dp"
+        android:layout_marginRight="4dp"
+        android:scaleType="centerInside"
         android:src="@drawable/account_circle" />
 
     <com.kyler.toolbarmenudrawer.ToolbarMenudrawerTextView
@@ -31,7 +30,8 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_alignTop="@+id/circularImageView1"
-        android:layout_toRightOf="@+id/circularImageView1"
+        android:layout_marginTop="6dp"
+        android:layout_toEndOf="@+id/circularImageView1"
         android:text="@string/my_name"
         android:textColor="#fffafafa"
         android:textSize="18.0sp"
@@ -41,12 +41,15 @@
         android:id="@+id/myTextView2"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+        android:layout_alignBottom="@+id/circularImageView1"
+        android:layout_alignStart="@+id/myTextView1"
         android:layout_below="@+id/myTextView1"
-        android:layout_marginTop="3dp"
-        android:layout_toRightOf="@+id/circularImageView1"
+        android:layout_marginTop="4dp"
+        android:layout_toEndOf="@+id/circularImageView1"
         android:text="@string/my_email"
         android:textColor="#ffe5e5e5"
         android:textSize="14.0sp"
         customfontdemo:fontName="Roboto-Light.ttf" />
+
 
 </RelativeLayout>

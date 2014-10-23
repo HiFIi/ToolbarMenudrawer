@@ -19,20 +19,21 @@ import android.view.MenuItem;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.AdapterView;
+import android.widget.ImageView;
 import android.widget.ListView;
+import android.widget.Toast;
 
 import com.kyler.toolbarmenudrawer.adapter.ToolbarMenudrawerAdapter;
-import com.kyler.toolbarmenudrawer.fragments.WeatherFragment;
+import com.kyler.toolbarmenudrawer.fragments.DemoFragment;
 import com.kyler.toolbarmenudrawer.ui.Icons;
-import com.wisemandesigns.android.widgets.CircularImageView;
 
 import java.util.ArrayList;
 
 public class ToolbarMenudrawer extends ActionBarActivity {
 
     final Context context = this;
-    public CircularImageView iv;
-    Fragment weather = new WeatherFragment();
+    public ImageView iv;
+    Fragment weather = new DemoFragment();
     private DrawerLayout mDrawerLayout;
     private ListView mDrawerList;
     private ActionBarDrawerToggle mDrawerToggle;
@@ -136,6 +137,20 @@ public class ToolbarMenudrawer extends ActionBarActivity {
             return true;
         }
         switch (item.getItemId()) {
+            case R.id.option1:
+                Toast.makeText(this, "Option 1", Toast.LENGTH_SHORT)
+                        .show();
+                break;
+
+            case R.id.option2:
+                Toast.makeText(this, "Option 2", Toast.LENGTH_SHORT)
+                        .show();
+                break;
+
+            case R.id.option3:
+                Toast.makeText(this, "Option 3", Toast.LENGTH_SHORT)
+                        .show();
+                break;
 
             default:
 
@@ -152,21 +167,6 @@ public class ToolbarMenudrawer extends ActionBarActivity {
 
             case 0:
                 ft.replace(R.id.content_frame, weather);
-                break;
-
-            case 1:
-                break;
-
-            case 2:
-                break;
-
-            case 3:
-                break;
-
-            case 4:
-                break;
-
-            case 5:
                 break;
 
         }

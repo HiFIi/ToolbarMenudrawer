@@ -1,9 +1,9 @@
 <resources>
     <!-- inherit from the material theme -->
-    <style name="ToolbarMenudrawer.Theme" parent="Theme.AppCompat">
-        <item name="colorPrimary">#5677fc</item>
-        <item name="colorPrimaryDark">#455ede</item>
-        <item name="colorAccent">#5677fc</item>
+    <style name="ToolbarMenudrawer.Theme" parent="Theme.AppCompat.NoActionBar">
+        <item name="colorPrimary">#303f9f</item>
+        <item name="colorPrimaryDark">#1a237e</item>
+        <item name="colorAccent">#303f9f</item>
         <item name="android:windowContentOverlay">@null</item>
         <item name="android:windowActionBarOverlay">true</item>
         <item name="windowActionBar">false</item>

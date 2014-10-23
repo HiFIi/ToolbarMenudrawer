@@ -13,4 +13,4 @@
     android:textColor="#ff505050"
     android:textSize="12sp"
     customfontdemo:fontName="Roboto-Regular.ttf"
-    tools:ignore="RtlSymmetry" /><!-- From: file:/home/kyler/Desktop/ToolbarMenudrawer/app/src/main/res/layout/drawer_list_item.xml -->
+    tools:ignore="RtlSymmetry" /><!-- From: file:/home/kyler/Downloads/ToolbarMenudrawer/app/src/main/res/layout/drawer_list_item.xml -->

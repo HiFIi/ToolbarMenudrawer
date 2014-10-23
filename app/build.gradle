@@ -5,8 +5,8 @@ android {
     buildToolsVersion "21.0.1"
 
     defaultConfig {
-        applicationId "com.kyler.toolbarmenudrawer"
-        minSdkVersion 19
+        applicationId "com.kyler.ToolbarMenudrawer"
+        minSdkVersion 14
         targetSdkVersion 21
     }
 

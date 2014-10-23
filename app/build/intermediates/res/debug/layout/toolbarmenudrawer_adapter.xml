@@ -14,7 +14,7 @@
         android:layout_alignParentLeft="true"
         android:layout_alignParentTop="true"
         android:layout_centerVertical="true"
-        android:paddingLeft="18dp"
+        android:paddingLeft="16dp"
         android:scaleType="fitCenter"
         tools:ignore="RtlSymmetry,ContentDescription" />
 
@@ -24,13 +24,13 @@
         android:layout_height="wrap_content"
         android:ellipsize="marquee"
         android:gravity="center_vertical"
-        android:paddingBottom="16dp"
+        android:paddingBottom="18dp"
         android:paddingLeft="72dp"
-        android:paddingTop="16dp"
+        android:paddingTop="18dp"
         android:singleLine="true"
-        android:textColor="#202020"
+        android:textColor="#353535"
         android:textSize="18.0sp"
         customfontdemo:fontName="Roboto-Regular.ttf"
         tools:ignore="RtlSymmetry" />
 
-</RelativeLayout><!-- From: file:/home/kyler/Desktop/ToolbarMenudrawer/app/src/main/res/layout/toolbarmenudrawer_adapter.xml -->
+</RelativeLayout><!-- From: file:/home/kyler/Downloads/ToolbarMenudrawer/app/src/main/res/layout/toolbarmenudrawer_adapter.xml -->

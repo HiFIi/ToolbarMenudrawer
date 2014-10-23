@@ -1,8 +1,8 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
-    <!-- From: file:/home/kyler/Desktop/ToolbarMenudrawer/app/src/main/res/values-v19/styles.xml -->
+    <!-- From: file:/home/kyler/Downloads/ToolbarMenudrawer/app/src/main/res/values-v19/styles.xml -->
     <eat-comment/>
-    <style name="ToolbarMenudrawer.Theme" parent="Theme.AppCompat">
+    <style name="ToolbarMenudrawer.Theme" parent="Theme.AppCompat.NoActionBar">
         <item name="android:windowContentOverlay">@null</item>
         <item name="android:windowActionBarOverlay">true</item>
         <item name="windowActionBar">false</item>

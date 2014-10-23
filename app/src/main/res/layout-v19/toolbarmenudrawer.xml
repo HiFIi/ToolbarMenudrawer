@@ -28,7 +28,7 @@
             android:layout_width="@dimen/nav_drawer_width_custom"
             android:layout_height="fill_parent"
             android:layout_gravity="start"
-            android:background="#fffafafa"
+            android:background="#fff2f2f2"
             android:choiceMode="singleChoice"
             android:divider="#00000000"
             android:dividerHeight="1.00dp"
@@ -49,9 +49,9 @@
             android:id="@+id/toolbar"
             android:layout_width="match_parent"
             android:layout_height="?attr/actionBarSize"
-            android:background="#5677fc"
+            android:background="#303f9f"
             android:gravity="top"
-            android:minHeight="56.0dip"
+            android:minHeight="58.0dip"
             app:popupTheme="@style/ThemeOverlay.AppCompat.Light"
             app:theme="@style/ThemeOverlay.AppCompat.Dark.ActionBar" />
     </LinearLayout>

@@ -1,6 +1,6 @@
 <resources>
     <!-- inherit from the material theme -->
-    <style name="ToolbarMenudrawer.Theme" parent="Theme.AppCompat">
+    <style name="ToolbarMenudrawer.Theme" parent="Theme.AppCompat.NoActionBar">
         <item name="android:windowContentOverlay">@null</item>
         <item name="android:windowActionBarOverlay">true</item>
         <item name="windowActionBar">false</item>
