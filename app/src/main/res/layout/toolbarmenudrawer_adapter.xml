@@ -25,12 +25,12 @@
         android:layout_height="wrap_content"
         android:ellipsize="marquee"
         android:gravity="center_vertical"
-        android:paddingBottom="24dp"
+        android:paddingBottom="26dp"
         android:paddingLeft="72dp"
-        android:paddingTop="26dp"
+        android:paddingTop="24dp"
         android:singleLine="true"
         android:textColor="#353535"
-        android:textSize="18.0sp"
+        android:textSize="17.0sp"
         customfontdemo:fontName="Roboto-Regular.ttf"
         tools:ignore="RtlSymmetry" />
 

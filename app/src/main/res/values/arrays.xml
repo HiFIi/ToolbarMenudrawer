@@ -2,6 +2,7 @@
 <resources>
 
     <string-array name="navigation_main_sections">
+        <item>Submit a request</item>
         <item>Android</item>
         <item>Bugdroid</item>
         <item>Cake</item>
@@ -9,6 +10,7 @@
     </string-array>
 
     <array name="drawable_ids">
+        <item>@drawable/request</item>
         <item>@drawable/android</item>
         <item>@drawable/bugdroid</item>
         <item>@drawable/cake</item>

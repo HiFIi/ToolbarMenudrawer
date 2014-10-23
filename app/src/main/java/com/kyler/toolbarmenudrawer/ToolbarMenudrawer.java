@@ -1,11 +1,13 @@
 package com.kyler.toolbarmenudrawer;
 
 import android.annotation.SuppressLint;
+import android.annotation.TargetApi;
 import android.app.Fragment;
 import android.app.FragmentTransaction;
 import android.content.Context;
 import android.content.res.Configuration;
 import android.content.res.TypedArray;
+import android.os.Build;
 import android.os.Bundle;
 import android.support.v4.view.GravityCompat;
 import android.support.v4.widget.DrawerLayout;
@@ -18,6 +20,7 @@ import android.view.MenuInflater;
 import android.view.MenuItem;
 import android.view.View;
 import android.view.ViewGroup;
+import android.view.Window;
 import android.widget.AdapterView;
 import android.widget.ImageView;
 import android.widget.ListView;
@@ -25,6 +28,7 @@ import android.widget.Toast;
 
 import com.kyler.toolbarmenudrawer.adapter.ToolbarMenudrawerAdapter;
 import com.kyler.toolbarmenudrawer.fragments.DemoFragment;
+import com.kyler.toolbarmenudrawer.fragments.RequestByEmail;
 import com.kyler.toolbarmenudrawer.ui.Icons;
 
 import java.util.ArrayList;
@@ -33,7 +37,7 @@ public class ToolbarMenudrawer extends ActionBarActivity {
 
     final Context context = this;
     public ImageView iv;
-    Fragment weather = new DemoFragment();
+    Fragment demo = new DemoFragment();
     private DrawerLayout mDrawerLayout;
     private ListView mDrawerList;
     private ActionBarDrawerToggle mDrawerToggle;
@@ -45,6 +49,8 @@ public class ToolbarMenudrawer extends ActionBarActivity {
     private String[] MDTitles;
     private TypedArray MDIcons;
     private Toolbar mToolbar;
+
+    Fragment request = new RequestByEmail();
 
     @SuppressLint("InlinedApi")
     @Override
@@ -83,6 +89,8 @@ public class ToolbarMenudrawer extends ActionBarActivity {
 
         icons.add(new Icons(MDTitles[3], MDIcons.getResourceId(3, -4)));
 
+        icons.add(new Icons(MDTitles[4], MDIcons.getResourceId(4, -5)));
+
         MDIcons.recycle();
 
         adapter = new ToolbarMenudrawerAdapter(getApplicationContext(), icons);
@@ -98,7 +106,7 @@ public class ToolbarMenudrawer extends ActionBarActivity {
         // Give your Actionbar a subtitle!
         /* mToolbar.setSubtitle("Subtitle"); */
 
-        mDrawerList.addHeaderView(header, null, false);
+        mDrawerList.addHeaderView(header, null, true); // true = clickable
 
         mDrawerLayout = (DrawerLayout) findViewById(R.id.drawer_layout);
         mDrawerToggle = new ActionBarDrawerToggle(
@@ -160,13 +168,74 @@ public class ToolbarMenudrawer extends ActionBarActivity {
         return super.onOptionsItemSelected(item);
     }
 
+    @TargetApi(Build.VERSION_CODES.LOLLIPOP)
     private void selectItem(int position) {
 
         FragmentTransaction ft = getFragmentManager().beginTransaction();
         switch (position) {
 
             case 0:
-                ft.replace(R.id.content_frame, weather);
+                ft.replace(R.id.content_frame, demo);
+                getSupportActionBar().setTitle("");
+                // TODO:
+                // Different themes
+                getWindow().setNavigationBarColor(getResources().getColor(R.color.navbarcolor_request));
+                getWindow().setStatusBarColor(getResources().getColor(R.color.statusbarcolor_request_darker));
+                mToolbar.setBackgroundColor(getResources().getColor(R.color.toolbarcolor_request));
+                break;
+
+            case 1:
+                ft.replace(R.id.content_frame, request);
+                getSupportActionBar().setTitle("Request");
+                if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.KITKAT) {
+                    getWindow().setNavigationBarColor(getResources().getColor(R.color.navbarcolor_request));
+                    getWindow().setStatusBarColor(getResources().getColor(R.color.statusbarcolor_request_darker));
+                    mToolbar.setBackgroundColor(getResources().getColor(R.color.toolbarcolor_request));
+                }
+                break;
+
+            case 2:
+                getSupportActionBar().setTitle("Android");
+                if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.KITKAT) {
+                    // TODO:
+                    // Different themes
+                    getWindow().setNavigationBarColor(getResources().getColor(R.color.navbarcolor));
+                    getWindow().setStatusBarColor(getResources().getColor(R.color.statusbarcolor_darker));
+                    mToolbar.setBackgroundColor(getResources().getColor(R.color.toolbarcolor));
+                }
+                break;
+
+            case 3:
+                getSupportActionBar().setTitle("Bugdroid");
+                if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.KITKAT) {
+                    // TODO:
+                    // Different themes
+                    getWindow().setNavigationBarColor(getResources().getColor(R.color.navbarcolor));
+                    getWindow().setStatusBarColor(getResources().getColor(R.color.statusbarcolor_darker));
+                    mToolbar.setBackgroundColor(getResources().getColor(R.color.toolbarcolor));
+                }
+                break;
+
+            case 4:
+                getSupportActionBar().setTitle("Cake <3");
+                if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.KITKAT) {
+                    // TODO:
+                    // Different themes
+                    getWindow().setNavigationBarColor(getResources().getColor(R.color.navbarcolor));
+                    getWindow().setStatusBarColor(getResources().getColor(R.color.statusbarcolor_darker));
+                    mToolbar.setBackgroundColor(getResources().getColor(R.color.toolbarcolor));
+                }
+                break;
+
+            case 5:
+                getSupportActionBar().setTitle("Person");
+                if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.KITKAT) {
+                    // TODO:
+                    // Different themes
+                    getWindow().setNavigationBarColor(getResources().getColor(R.color.navbarcolor));
+                    getWindow().setStatusBarColor(getResources().getColor(R.color.statusbarcolor_darker));
+                    mToolbar.setBackgroundColor(getResources().getColor(R.color.toolbarcolor));
+                }
                 break;
 
         }

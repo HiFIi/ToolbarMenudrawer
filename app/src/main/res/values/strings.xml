@@ -6,9 +6,17 @@
     <string name="drawer_open">Open</string>
     <string name="drawer_close">Close</string>
     <string name="my_name">My name</string>
-    <string name="my_email">Myname@example.com</string>
+    <string name="my_email_demo">Myname@example.com</string>
     <string name="option_one">Test option 1</string>
     <string name="option_two">Test option 2</string>
     <string name="option_three">Test option 3</string>
-
+    <string name="recipient">Recipient</string>
+    <string name="message_body">Message body</string>
+    <string name="subject">Subject</string>
+    <string name="send">Send</string>
+    <string name="request">Request</string>
+    <string name="my_email">MBQSniper@hotmail.com</string>
+    <string name="feature_request">Feature Request</string>
+    <string name="recipient_bold">Recipient:</string>
+    <string name="bold_subject">Subject:</string>
 </resources>

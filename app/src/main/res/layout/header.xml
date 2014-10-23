@@ -38,7 +38,7 @@
         android:id="@+id/myTextView2"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="@string/my_email"
+        android:text="@string/my_email_demo"
         android:textColor="#ffe5e5e5"
         android:textSize="14.0sp"
         customfontdemo:fontName="Roboto-Light.ttf"
