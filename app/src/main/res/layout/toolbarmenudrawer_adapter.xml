@@ -15,6 +15,7 @@
         android:layout_alignParentTop="true"
         android:layout_centerVertical="true"
         android:paddingLeft="16dp"
+        android:paddingTop="2.50dp"
         android:scaleType="fitCenter"
         tools:ignore="RtlSymmetry,ContentDescription" />
 
@@ -24,9 +25,9 @@
         android:layout_height="wrap_content"
         android:ellipsize="marquee"
         android:gravity="center_vertical"
-        android:paddingBottom="18dp"
+        android:paddingBottom="24dp"
         android:paddingLeft="72dp"
-        android:paddingTop="18dp"
+        android:paddingTop="26dp"
         android:singleLine="true"
         android:textColor="#353535"
         android:textSize="18.0sp"
