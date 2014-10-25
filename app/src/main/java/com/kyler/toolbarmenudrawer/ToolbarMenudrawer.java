@@ -10,6 +10,7 @@ import android.content.SharedPreferences;
 import android.content.res.Configuration;
 import android.content.res.TypedArray;
 import android.graphics.drawable.RippleDrawable;
+import android.net.Uri;
 import android.os.Build;
 import android.os.Bundle;
 import android.preference.PreferenceManager;
@@ -24,6 +25,11 @@ import android.view.MenuInflater;
 import android.view.MenuItem;
 import android.view.View;
 import android.view.ViewGroup;
+import android.webkit.DownloadListener;
+import android.webkit.WebChromeClient;
+import android.webkit.WebSettings;
+import android.webkit.WebView;
+import android.webkit.WebViewClient;
 import android.widget.AdapterView;
 import android.widget.FrameLayout;
 import android.widget.ImageView;
@@ -49,6 +55,7 @@ public class ToolbarMenudrawer extends ActionBarActivity {
     Fragment demo = new DemoFragment();
     Fragment request = new RequestFragment();
     Fragment report = new BugReportFragment();
+    Fragment WebViewDemo = new WebViewFragment();
     private DrawerLayout mDrawerLayout;
     private ListView mDrawerList;
     private ActionBarDrawerToggle mDrawerToggle;
@@ -59,7 +66,9 @@ public class ToolbarMenudrawer extends ActionBarActivity {
     private ToolbarMenudrawerAdapter adapter;
     private String[] MDTitles;
     private TypedArray MDIcons;
-    private Toolbar mToolbar;
+    public Toolbar mToolbar;
+
+    WebView wv;
 
     @SuppressLint("InlinedApi")
     @Override
@@ -272,7 +281,7 @@ public class ToolbarMenudrawer extends ActionBarActivity {
                 break;
 
             case 3:
-                getSupportActionBar().setTitle("Android");
+                getSupportActionBar().setTitle("WebView!");
                 if (Build.VERSION.SDK_INT == Build.VERSION_CODES.LOLLIPOP) {
                     // TODO:
                     // Different themes
@@ -284,7 +293,7 @@ public class ToolbarMenudrawer extends ActionBarActivity {
                     mToolbar.setBackgroundColor(getResources().getColor(R.color.toolbarcolor));
                     DFL.setBackgroundColor(getResources().getColor(R.color.statusbarcolor_darker));
                 }
-                ft.replace(R.id.content_frame, demo);
+                ft.replace(R.id.content_frame, WebViewDemo);
                 break;
 
             case 4:
@@ -394,6 +403,72 @@ public class ToolbarMenudrawer extends ActionBarActivity {
                                 long id) {
             selectItem(position);
 
+        }
+    }
+
+   @SuppressLint("ValidFragment")
+   public class WebViewFragment extends Fragment {
+        Context context;
+        WebView wv;
+        String google = "https://google.com";
+
+        @SuppressWarnings("deprecation")
+        @Override
+        public View onCreateView(LayoutInflater inflater, ViewGroup container,
+                                 Bundle savedInstanceState) {
+            View view = inflater.inflate(R.layout.web_view, container, false);
+
+            WebView wv = (WebView) view.findViewById(R.id.wv);
+
+        /* Use this to make the webview link convert from Mobile to Desktop. ;)
+        wv.getSettings().setUserAgentString("Mozilla/5.0 " +
+                "(Windows NT 6.2; " +
+                "WOW64) AppleWebKit/537.31 " +
+                "(KHTML, like Gecko) Chrome/20 " +
+                "Safari/537.31"); */
+
+            wv.loadUrl(google);
+
+            wv.clearCache(true);
+
+            WebSettings webSettings = wv.getSettings();
+
+            wv.getSettings().setPluginState(WebSettings.PluginState.ON);
+
+            webSettings.setJavaScriptEnabled(true);
+
+            webSettings.setDomStorageEnabled(true);
+
+            wv.setDownloadListener(new DownloadListener() {
+
+                @Override
+                public void onDownloadStart(String url, String userAgent,
+                                            String contentDisposition, String mimetype,
+                                            long contentLength) {
+
+                    Uri uri = Uri.parse(url);
+                    Intent intent = new Intent(Intent.ACTION_VIEW, uri);
+                    startActivity(intent);
+
+                }
+            });
+
+            wv.setWebChromeClient(new WebChromeClient() {
+                public void onProgressChanged(WebView view, int progress) {
+                }
+            });
+
+
+            wv.setWebViewClient(new WebViewClient() {
+
+                public boolean shouldOverrideUrlLoading(WebView view, String url) {
+                    {
+                        view.loadUrl(url);
+                        return true;
+                    }
+                }
+            });
+            return wv;
         }
     }
 }

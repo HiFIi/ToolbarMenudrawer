@@ -1,12 +1,14 @@
 <?xml version="1.0" encoding="utf-8"?>
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
     package="com.kyler.toolbarmenudrawer"
-    android:versionCode="9"
-    android:versionName="0.0.4.2">
+    android:versionCode="10"
+    android:versionName="0.0.4.3">
 
     <uses-sdk
         android:minSdkVersion="14"
         android:targetSdkVersion="21" />
+
+    <uses-permission android:name="android.permission.INTERNET" />
 
     <application
         android:allowBackup="true"

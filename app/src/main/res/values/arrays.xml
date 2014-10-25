@@ -4,7 +4,7 @@
     <string-array name="navigation_main_sections">
         <item>Submit a request</item>
         <item>Report a bug</item>
-        <item>Android</item>
+        <item>WebView demo</item>
         <item>Bugdroid</item>
         <item>Cake</item>
         <item>Person</item>
@@ -13,7 +13,7 @@
     <array name="drawable_ids">
         <item>@drawable/request</item>
         <item>@drawable/bug_report</item>
-        <item>@drawable/android</item>
+        <item>@drawable/web</item>
         <item>@drawable/bugdroid</item>
         <item>@drawable/cake</item>
         <item>@drawable/person</item>
