@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:customfontdemo="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <View
+        android:id="@+id/divider"
+        android:layout_width="match_parent"
+        android:layout_height="2.00dp"
+        android:background="#CCd5d5d5"
+        android:visibility="visible"
+        android:layout_alignParentTop="true"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true" />
+
+    <com.kyler.toolbarmenudrawer.ToolbarMenudrawerTextView
+        android:id="@+id/myTextView1"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:gravity="left"
+        android:background="@drawable/footer_button_with_ripple"
+        android:textColor="#ff101010"
+        android:textSize="15.0sp"
+        android:paddingTop="24dp"
+        android:paddingBottom="24dp"
+        android:text="@string/about"
+        customfontdemo:fontName="Roboto-Bold.ttf"
+        android:paddingLeft="22dp"
+        android:layout_below="@+id/divider"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true" />
+</RelativeLayout>

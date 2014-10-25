@@ -1,0 +1,48 @@
+<resources>
+
+    <style name="ToolbarMenudrawer.Theme" parent="Theme.AppCompat.NoActionBar">
+        <item name="android:windowContentOverlay">@null</item>
+        <item name="windowActionBar">false</item>
+        <item name="android:fitsSystemWindows">true</item>
+        <item name="android:actionBarStyle">@style/ToolbarMenudrawer.Actionbar.Theme</item>
+    </style>
+
+    <style name="ToolbarMenudrawer.Actionbar.Theme" parent="Widget.AppCompat.Light.ActionBar">
+        <item name="android:background">#FF34495e</item>
+        <item name="android:titleTextStyle">
+            @style/ToolbarMenudrawer.ActionBar.TitleTextStyle.Theme
+        </item>
+        <item name="android:height">48.0dip</item>
+        <item name="android:icon">@android:color/transparent</item>
+    </style>
+
+    <style name="ToolbarMenudrawer.ActionBar.TitleTextStyle.Theme" parent="TextAppearance.AppCompat.Widget.ActionBar.Title">
+        <item name="android:textColorHint">@android:color/transparent</item>
+        <item name="android:textColor">@android:color/transparent</item>
+    </style>
+
+    <style name="WhiteTeal.Theme" parent="Theme.AppCompat.NoActionBar">
+        <item name="android:windowContentOverlay">@null</item>
+        <item name="android:windowActionBarOverlay">true</item>
+        <item name="windowActionBar">false</item>
+        <item name="android:actionBarStyle">@style/WhiteTeal.Actionbar.Theme</item>
+        <item name="android:windowBackground">@color/background_material_light</item>
+    </style>
+
+    <style name="WhiteTeal.Actionbar.Theme" parent="android:Widget.Holo.Light.ActionBar">
+        <item name="android:background">#FF34495e</item>
+        <item name="windowActionBar">false</item>
+        <item name="android:titleTextStyle">
+            @style/WhiteTeal.ActionBar.TitleTextStyle.Theme
+        </item>
+        <item name="android:height">48.0dip</item>
+        <item name="android:icon">@android:color/transparent</item>
+        <item name="android:fitsSystemWindows">true</item>
+    </style>
+
+    <style name="WhiteTeal.ActionBar.TitleTextStyle.Theme" parent="android:TextAppearance.Holo.Widget.ActionBar.Title">
+        <item name="android:textColorHint">@android:color/transparent</item>
+        <item name="android:textColor">@android:color/transparent</item>
+    </style>
+
+</resources>

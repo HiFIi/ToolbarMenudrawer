@@ -21,5 +21,6 @@
     <string name="bold_subject">Subject:</string>
     <string name="hello_blank_fragment">Hello blank fragment</string>
     <string name="bug_report">Bug report</string>
+    <string name="about">About</string>
 
 </resources>

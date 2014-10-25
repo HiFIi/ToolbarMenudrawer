@@ -37,7 +37,7 @@
     </style>
 
     <style name="WhiteTeal.Actionbar.Theme" parent="android:Widget.Material.Light.ActionBar">
-        <item name="android:background">#FF34495e</item>
+        <item name="android:background">#00000000</item>
         <item name="android:titleTextStyle">
             @style/WhiteTeal.ActionBar.TitleTextStyle.Theme
         </item>
@@ -46,6 +46,31 @@
     </style>
 
     <style name="WhiteTeal.ActionBar.TitleTextStyle.Theme" parent="android:TextAppearance.Material.Widget.ActionBar.Title">
+        <item name="android:textColorHint">@android:color/transparent</item>
+        <item name="android:textColor">@android:color/transparent</item>
+    </style>
+
+    <style name="About.Theme" parent="android:Theme.Material.Light">
+        <item name="colorPrimary">#fafafa</item>
+        <item name="colorPrimaryDark">#f7f7f7</item>
+        <item name="colorAccent">#303f9f</item>
+        <item name="android:windowTranslucentStatus">true</item>
+        <item name="android:windowContentOverlay">@null</item>
+        <item name="android:windowActionBarOverlay">true</item>
+        <item name="android:fitsSystemWindows">false</item>
+        <item name="android:actionBarStyle">@style/About.Actionbar.Theme</item>
+    </style>
+
+    <style name="About.Actionbar.Theme" parent="android:Widget.Material.Light.ActionBar">
+        <item name="android:background">@android:color/transparent</item>
+        <item name="android:titleTextStyle">
+            @style/About.ActionBar.TitleTextStyle.Theme
+        </item>
+        <item name="android:height">58.0dip</item>
+        <item name="android:icon">@android:color/transparent</item>
+    </style>
+
+    <style name="About.ActionBar.TitleTextStyle.Theme" parent="android:TextAppearance.Material.Widget.ActionBar.Title">
         <item name="android:textColorHint">@android:color/transparent</item>
         <item name="android:textColor">@android:color/transparent</item>
     </style>

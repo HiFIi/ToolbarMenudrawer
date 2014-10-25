@@ -36,6 +36,7 @@ import android.widget.ImageView;
 import android.widget.ListView;
 import android.widget.Toast;
 
+import com.kyler.toolbarmenudrawer.activities.About;
 import com.kyler.toolbarmenudrawer.activities.FirstRun;
 import com.kyler.toolbarmenudrawer.adapter.ToolbarMenudrawerAdapter;
 import com.kyler.toolbarmenudrawer.fragments.BugReportFragment;
@@ -59,15 +60,16 @@ public class ToolbarMenudrawer extends ActionBarActivity {
     private DrawerLayout mDrawerLayout;
     private ListView mDrawerList;
     private ActionBarDrawerToggle mDrawerToggle;
+
     @SuppressWarnings("unused")
     private CharSequence mDrawerTitle;
+
     private CharSequence mTitle;
     private ArrayList<Icons> icons;
     private ToolbarMenudrawerAdapter adapter;
     private String[] MDTitles;
     private TypedArray MDIcons;
     public Toolbar mToolbar;
-
     WebView wv;
 
     @SuppressLint("InlinedApi")
@@ -80,7 +82,7 @@ public class ToolbarMenudrawer extends ActionBarActivity {
                 .getDefaultSharedPreferences(this);
 
         if (getIntent().getBooleanExtra("EXIT", false)) {
-            finish();
+            super.finish();
         }
 
         if (!first.getBoolean("firstTime", false)) {
@@ -143,10 +145,14 @@ public class ToolbarMenudrawer extends ActionBarActivity {
         final ViewGroup header = (ViewGroup) inflater.inflate(R.layout.header,
                 mDrawerList, false);
 
+        final ViewGroup footer = (ViewGroup) inflater.inflate(R.layout.footer,
+                mDrawerList, false);
+
         // Give your Toolbar a subtitle!
         /* mToolbar.setSubtitle("Subtitle"); */
 
         mDrawerList.addHeaderView(header, null, true); // true = clickable
+        mDrawerList.addFooterView(footer, null, true); // true = clickable
 
         mDrawerLayout = (DrawerLayout) findViewById(R.id.drawer_layout);
         mDrawerToggle = new ActionBarDrawerToggle(
@@ -170,8 +176,10 @@ public class ToolbarMenudrawer extends ActionBarActivity {
 
             @Override
             public void onDrawerSlide(View drawerView, float slideOffset) {
+
                 /* TODO:
                 Add stuff. :p */
+
             }
         };
 
@@ -237,8 +245,10 @@ public class ToolbarMenudrawer extends ActionBarActivity {
             case 0:
                 getSupportActionBar().setTitle("");
                 if (Build.VERSION.SDK_INT == Build.VERSION_CODES.LOLLIPOP) {
+
                     // TODO:
                     // Different themes
+
                     getWindow().setNavigationBarColor(getResources().getColor(R.color.navbarcolor));
                     mToolbar.setBackgroundColor(getResources().getColor(toolbarcolor));
                     getWindow().setStatusBarColor(getResources().getColor(R.color.statusbarcolor_darker));
@@ -253,6 +263,10 @@ public class ToolbarMenudrawer extends ActionBarActivity {
             case 1:
                 getSupportActionBar().setTitle("Request");
                 if (Build.VERSION.SDK_INT == Build.VERSION_CODES.LOLLIPOP) {
+
+                    // TODO:
+                    // Different themes
+
                     getWindow().setNavigationBarColor(getResources().getColor(R.color.navbarcolor_request));
                     mToolbar.setBackgroundColor(getResources().getColor(R.color.toolbarcolor_request));
                     getWindow().setStatusBarColor(getResources().getColor(R.color.statusbarcolor_request_darker));
@@ -277,14 +291,16 @@ public class ToolbarMenudrawer extends ActionBarActivity {
                     mToolbar.setBackgroundColor(getResources().getColor(R.color.toolbarcolor_report));
                     DFL.setBackgroundColor(getResources().getColor(R.color.statusbarcolor_report_darker));
                 }
-                ft.replace(R.id.content_frame, demo);
+                ft.replace(R.id.content_frame, report);
                 break;
 
             case 3:
                 getSupportActionBar().setTitle("WebView!");
                 if (Build.VERSION.SDK_INT == Build.VERSION_CODES.LOLLIPOP) {
+
                     // TODO:
                     // Different themes
+
                     getWindow().setNavigationBarColor(getResources().getColor(R.color.navbarcolor));
                     mToolbar.setBackgroundColor(getResources().getColor(toolbarcolor));
                     getWindow().setStatusBarColor(getResources().getColor(R.color.statusbarcolor_darker));
@@ -299,8 +315,10 @@ public class ToolbarMenudrawer extends ActionBarActivity {
             case 4:
                 getSupportActionBar().setTitle("Bugdroid");
                 if (Build.VERSION.SDK_INT == Build.VERSION_CODES.LOLLIPOP) {
+
                     // TODO:
                     // Different themes
+
                     getWindow().setNavigationBarColor(getResources().getColor(R.color.navbarcolor));
                     mToolbar.setBackgroundColor(getResources().getColor(toolbarcolor));
                     getWindow().setStatusBarColor(getResources().getColor(R.color.statusbarcolor_darker));
@@ -315,8 +333,10 @@ public class ToolbarMenudrawer extends ActionBarActivity {
             case 5:
                 getSupportActionBar().setTitle("Cake <3");
                 if (Build.VERSION.SDK_INT == Build.VERSION_CODES.LOLLIPOP) {
+
                     // TODO:
                     // Different themes
+
                     getWindow().setNavigationBarColor(getResources().getColor(R.color.navbarcolor));
                     mToolbar.setBackgroundColor(getResources().getColor(toolbarcolor));
                     getWindow().setStatusBarColor(getResources().getColor(R.color.statusbarcolor_darker));
@@ -331,8 +351,10 @@ public class ToolbarMenudrawer extends ActionBarActivity {
             case 6:
                 getSupportActionBar().setTitle("Person");
                 if (Build.VERSION.SDK_INT == Build.VERSION_CODES.LOLLIPOP) {
+
                     // TODO:
                     // Different themes
+
                     getWindow().setNavigationBarColor(getResources().getColor(R.color.navbarcolor));
                     mToolbar.setBackgroundColor(getResources().getColor(toolbarcolor));
                     getWindow().setStatusBarColor(getResources().getColor(R.color.statusbarcolor_darker));
@@ -342,6 +364,14 @@ public class ToolbarMenudrawer extends ActionBarActivity {
                     DFL.setBackgroundColor(getResources().getColor(R.color.statusbarcolor_darker));
                 }
                 ft.replace(R.id.content_frame, demo);
+                break;
+
+            case 7:
+                // Not quite ready yet
+
+               /* Intent about = new Intent(this, About.class);
+                startActivity(about); */
+
                 break;
 
         }
@@ -401,6 +431,7 @@ public class ToolbarMenudrawer extends ActionBarActivity {
         @Override
         public void onItemClick(AdapterView<?> parent, View view, int position,
                                 long id) {
+
             selectItem(position);
 
         }
@@ -416,11 +447,12 @@ public class ToolbarMenudrawer extends ActionBarActivity {
         @Override
         public View onCreateView(LayoutInflater inflater, ViewGroup container,
                                  Bundle savedInstanceState) {
-            View view = inflater.inflate(R.layout.web_view, container, false);
 
+            View view = inflater.inflate(R.layout.web_view, container, false);
             WebView wv = (WebView) view.findViewById(R.id.wv);
 
         /* Use this to make the webview link convert from Mobile to Desktop. ;)
+
         wv.getSettings().setUserAgentString("Mozilla/5.0 " +
                 "(Windows NT 6.2; " +
                 "WOW64) AppleWebKit/537.31 " +
