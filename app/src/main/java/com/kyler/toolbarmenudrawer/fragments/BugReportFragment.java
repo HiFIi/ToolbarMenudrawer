@@ -23,7 +23,6 @@ public class BugReportFragment extends Fragment {
     private EditText body;
 
     @SuppressLint("InflateParams")
-    @TargetApi(Build.VERSION_CODES.KITKAT)
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
                              Bundle savedInstanceState) {

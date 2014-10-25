@@ -128,12 +128,6 @@ public class ToolbarMenudrawer extends ActionBarActivity {
 
         icons.add(new Icons(MDTitles[2], MDIcons.getResourceId(2, -3)));
 
-        icons.add(new Icons(MDTitles[3], MDIcons.getResourceId(3, -4)));
-
-        icons.add(new Icons(MDTitles[4], MDIcons.getResourceId(4, -5)));
-
-        icons.add(new Icons(MDTitles[5], MDIcons.getResourceId(5, -6)));
-
         MDIcons.recycle();
 
         adapter = new ToolbarMenudrawerAdapter(getApplicationContext(), icons);
@@ -313,60 +307,6 @@ public class ToolbarMenudrawer extends ActionBarActivity {
                 break;
 
             case 4:
-                getSupportActionBar().setTitle("Bugdroid");
-                if (Build.VERSION.SDK_INT == Build.VERSION_CODES.LOLLIPOP) {
-
-                    // TODO:
-                    // Different themes
-
-                    getWindow().setNavigationBarColor(getResources().getColor(R.color.navbarcolor));
-                    mToolbar.setBackgroundColor(getResources().getColor(toolbarcolor));
-                    getWindow().setStatusBarColor(getResources().getColor(R.color.statusbarcolor_darker));
-                } else if (Build.VERSION.SDK_INT == Build.VERSION_CODES.KITKAT) {
-                    getSupportActionBar().setTitle("");
-                    mToolbar.setBackgroundColor(getResources().getColor(R.color.toolbarcolor));
-                    DFL.setBackgroundColor(getResources().getColor(R.color.statusbarcolor_darker));
-                }
-                ft.replace(R.id.content_frame, demo);
-                break;
-
-            case 5:
-                getSupportActionBar().setTitle("Cake <3");
-                if (Build.VERSION.SDK_INT == Build.VERSION_CODES.LOLLIPOP) {
-
-                    // TODO:
-                    // Different themes
-
-                    getWindow().setNavigationBarColor(getResources().getColor(R.color.navbarcolor));
-                    mToolbar.setBackgroundColor(getResources().getColor(toolbarcolor));
-                    getWindow().setStatusBarColor(getResources().getColor(R.color.statusbarcolor_darker));
-                } else if (Build.VERSION.SDK_INT == Build.VERSION_CODES.KITKAT) {
-                    getSupportActionBar().setTitle("");
-                    mToolbar.setBackgroundColor(getResources().getColor(R.color.toolbarcolor));
-                    DFL.setBackgroundColor(getResources().getColor(R.color.statusbarcolor_darker));
-                }
-                ft.replace(R.id.content_frame, demo);
-                break;
-
-            case 6:
-                getSupportActionBar().setTitle("Person");
-                if (Build.VERSION.SDK_INT == Build.VERSION_CODES.LOLLIPOP) {
-
-                    // TODO:
-                    // Different themes
-
-                    getWindow().setNavigationBarColor(getResources().getColor(R.color.navbarcolor));
-                    mToolbar.setBackgroundColor(getResources().getColor(toolbarcolor));
-                    getWindow().setStatusBarColor(getResources().getColor(R.color.statusbarcolor_darker));
-                } else if (Build.VERSION.SDK_INT == Build.VERSION_CODES.KITKAT) {
-                    getSupportActionBar().setTitle("");
-                    mToolbar.setBackgroundColor(getResources().getColor(R.color.toolbarcolor));
-                    DFL.setBackgroundColor(getResources().getColor(R.color.statusbarcolor_darker));
-                }
-                ft.replace(R.id.content_frame, demo);
-                break;
-
-            case 7:
                 // Not quite ready yet
 
                /* Intent about = new Intent(this, About.class);

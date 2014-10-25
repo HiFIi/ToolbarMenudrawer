@@ -11,7 +11,7 @@
         android:background="#f2f2f2"
         android:paddingBottom="-30dp">
 
-        <TextView
+        <EditText
             android:id="@+id/reportBoldRecipient"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
