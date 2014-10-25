@@ -2,20 +2,12 @@ package com.kyler.toolbarmenudrawer.fragments;
 
 import android.annotation.SuppressLint;
 import android.annotation.TargetApi;
-import android.app.ActionBar;
-import android.app.Activity;
+import android.app.Fragment;
 import android.content.Intent;
 import android.net.Uri;
 import android.os.Build;
 import android.os.Bundle;
-import android.app.Fragment;
-import android.text.Spannable;
-import android.text.SpannableString;
-import android.text.style.TypefaceSpan;
 import android.view.LayoutInflater;
-import android.view.Menu;
-import android.view.MenuInflater;
-import android.view.MenuItem;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.Button;
@@ -39,7 +31,7 @@ public class BugReportFragment extends Fragment {
         View view = inflater.inflate(R.layout.bug_report, container,
                 false);
 
-        recipient = (EditText) view.findViewById(R.id.reportBoldRecipient);
+        recipient = (EditText) view.findViewById(R.id.Reportrecipient);
         subject = (EditText) view.findViewById(R.id.Reportsubject);
         body = (EditText) view.findViewById(R.id.Reportbody);
 
@@ -58,7 +50,7 @@ public class BugReportFragment extends Fragment {
 
     protected void sendEmail() {
 
-        String[] recipients = { recipient.getText().toString() };
+        String[] recipients = {recipient.getText().toString()};
         Intent email = new Intent(Intent.ACTION_SEND, Uri.parse("mailto:"));
         // prompts email clients only
         email.setType("message/rfc822");

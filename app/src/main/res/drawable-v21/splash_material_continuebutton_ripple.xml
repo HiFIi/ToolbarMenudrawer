@@ -1,5 +1,4 @@
 <ripple xmlns:android="http://schemas.android.com/apk/res/android"
     android:color="#004d40">
-    <item android:drawable="@drawable/splash_material_button_ripple" >
-    </item>
+    <item android:drawable="@drawable/splash_material_button_ripple"></item>
 </ripple>

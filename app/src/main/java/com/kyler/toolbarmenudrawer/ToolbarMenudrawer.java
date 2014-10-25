@@ -45,7 +45,10 @@ public class ToolbarMenudrawer extends ActionBarActivity {
 
     final Context context = this;
     public ImageView iv;
+    public RippleDrawable rb;
     Fragment demo = new DemoFragment();
+    Fragment request = new RequestFragment();
+    Fragment report = new BugReportFragment();
     private DrawerLayout mDrawerLayout;
     private ListView mDrawerList;
     private ActionBarDrawerToggle mDrawerToggle;
@@ -57,11 +60,6 @@ public class ToolbarMenudrawer extends ActionBarActivity {
     private String[] MDTitles;
     private TypedArray MDIcons;
     private Toolbar mToolbar;
-
-    public RippleDrawable rb;
-
-    Fragment request = new RequestFragment();
-    Fragment report = new BugReportFragment();
 
     @SuppressLint("InlinedApi")
     @Override
@@ -160,6 +158,7 @@ public class ToolbarMenudrawer extends ActionBarActivity {
                 invalidateOptionsMenu();
 
             }
+
             @Override
             public void onDrawerSlide(View drawerView, float slideOffset) {
                 /* TODO:
@@ -236,7 +235,6 @@ public class ToolbarMenudrawer extends ActionBarActivity {
                     getWindow().setStatusBarColor(getResources().getColor(R.color.statusbarcolor_darker));
                 } else if (Build.VERSION.SDK_INT == Build.VERSION_CODES.KITKAT) {
                     getSupportActionBar().setTitle("");
-
                     DFL.setBackgroundColor(getResources().getColor(R.color.statusbarcolor_darker));
                 }
 
@@ -252,7 +250,6 @@ public class ToolbarMenudrawer extends ActionBarActivity {
                 } else if (Build.VERSION.SDK_INT == Build.VERSION_CODES.KITKAT) {
                     getSupportActionBar().setTitle("");
                     mToolbar.setBackgroundColor(getResources().getColor(R.color.toolbarcolor_request));
-
                     DFL.setBackgroundColor(getResources().getColor(R.color.statusbarcolor_request_darker));
                 }
                 ft.replace(R.id.content_frame, request);
@@ -266,11 +263,12 @@ public class ToolbarMenudrawer extends ActionBarActivity {
                     getWindow().setNavigationBarColor(getResources().getColor(R.color.navbarcolor_report));
                     mToolbar.setBackgroundColor(getResources().getColor(R.color.toolbarcolor_report));
                     getWindow().setStatusBarColor(getResources().getColor(R.color.statusbarcolor_report_darker));
-               } else if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.KITKAT) {
+                } else if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.KITKAT) {
                     getSupportActionBar().setTitle("");
                     mToolbar.setBackgroundColor(getResources().getColor(R.color.toolbarcolor_report));
                     DFL.setBackgroundColor(getResources().getColor(R.color.statusbarcolor_report_darker));
-        }
+                }
+                ft.replace(R.id.content_frame, demo);
                 break;
 
             case 3:
@@ -282,10 +280,11 @@ public class ToolbarMenudrawer extends ActionBarActivity {
                     mToolbar.setBackgroundColor(getResources().getColor(toolbarcolor));
                     getWindow().setStatusBarColor(getResources().getColor(R.color.statusbarcolor_darker));
                 } else if (Build.VERSION.SDK_INT == Build.VERSION_CODES.KITKAT) {
-            getSupportActionBar().setTitle("");
+                    getSupportActionBar().setTitle("");
                     mToolbar.setBackgroundColor(getResources().getColor(R.color.toolbarcolor));
                     DFL.setBackgroundColor(getResources().getColor(R.color.statusbarcolor_darker));
-        }
+                }
+                ft.replace(R.id.content_frame, demo);
                 break;
 
             case 4:
@@ -301,6 +300,7 @@ public class ToolbarMenudrawer extends ActionBarActivity {
                     mToolbar.setBackgroundColor(getResources().getColor(R.color.toolbarcolor));
                     DFL.setBackgroundColor(getResources().getColor(R.color.statusbarcolor_darker));
                 }
+                ft.replace(R.id.content_frame, demo);
                 break;
 
             case 5:
@@ -316,6 +316,7 @@ public class ToolbarMenudrawer extends ActionBarActivity {
                     mToolbar.setBackgroundColor(getResources().getColor(R.color.toolbarcolor));
                     DFL.setBackgroundColor(getResources().getColor(R.color.statusbarcolor_darker));
                 }
+                ft.replace(R.id.content_frame, demo);
                 break;
 
             case 6:
@@ -331,6 +332,7 @@ public class ToolbarMenudrawer extends ActionBarActivity {
                     mToolbar.setBackgroundColor(getResources().getColor(R.color.toolbarcolor));
                     DFL.setBackgroundColor(getResources().getColor(R.color.statusbarcolor_darker));
                 }
+                ft.replace(R.id.content_frame, demo);
                 break;
 
         }

@@ -53,7 +53,7 @@ public class FirstRun extends Activity {
 
         final Button continueButton = (Button) findViewById(R.id.splashContinueButton);
         animFadeIn = AnimationUtils.loadAnimation(this, android.R.anim.fade_in);
-        animFadeIn.setDuration(2500);
+        animFadeIn.setDuration(2700);
 
         Handler handler = new Handler();
         handler.postDelayed(new Runnable() {
@@ -62,7 +62,7 @@ public class FirstRun extends Activity {
                 continueButton.setVisibility(View.VISIBLE);
 
             }
-        }, 3500);
+        }, 3550);
 
         continueButton.setOnClickListener(new View.OnClickListener() {
 

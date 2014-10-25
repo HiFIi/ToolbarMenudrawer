@@ -1,6 +1,4 @@
-<RelativeLayout
-    xmlns:android="http://schemas.android.com/apk/res/android"
-    xmlns:app="http://schemas.android.com/apk/res-auto"
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
@@ -11,7 +9,7 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:background="#f2f2f2"
-        android:paddingBottom="-30dp" >
+        android:paddingBottom="-30dp">
 
         <TextView
             android:id="@+id/boldRecipient"
@@ -19,16 +17,16 @@
             android:layout_height="wrap_content"
             android:layout_alignParentTop="true"
             android:layout_centerHorizontal="true"
+            android:editable="false"
+            android:enabled="false"
             android:fontFamily="sans-serif-thin"
             android:gravity="center"
             android:paddingTop="10dp"
             android:text="@string/recipient_bold"
             android:textColor="#2d2d2d"
             android:textSize="20sp"
-            android:enabled="false"
-            tools:ignore="SpUsage"
-            android:editable="false"
-            android:typeface="normal" />
+            android:typeface="normal"
+            tools:ignore="SpUsage" />
 
         <EditText
             android:id="@+id/recipient"
@@ -37,15 +35,15 @@
             android:layout_alignParentLeft="true"
             android:layout_below="@+id/boldRecipient"
             android:background="#00000000"
+            android:editable="false"
             android:ems="10"
+            android:enabled="false"
             android:fontFamily="sans-serif-light"
             android:gravity="center"
             android:hint="@string/recipient"
             android:inputType="none"
             android:paddingTop="7dp"
             android:text="@string/my_email"
-            android:editable="false"
-            android:enabled="false"
             android:textColor="#242424"
             android:textSize="18dp"
             android:textStyle="bold"
@@ -59,7 +57,9 @@
             android:layout_alignParentRight="true"
             android:layout_below="@+id/boldSubject"
             android:background="#00000000"
+            android:editable="false"
             android:ems="10"
+            android:enabled="false"
             android:fontFamily="sans-serif-light"
             android:gravity="center"
             android:hint="@string/subject"
@@ -69,8 +69,6 @@
             android:textColor="#242424"
             android:textSize="18dp"
             android:textStyle="bold"
-            android:editable="false"
-            android:enabled="false"
             tools:ignore="SpUsage" />
 
         <TextView
@@ -80,10 +78,10 @@
             android:layout_alignParentLeft="true"
             android:layout_alignParentRight="true"
             android:layout_below="@+id/recipient"
-            android:fontFamily="sans-serif-thin"
-            android:gravity="center"
             android:editable="false"
             android:enabled="false"
+            android:fontFamily="sans-serif-thin"
+            android:gravity="center"
             android:paddingTop="10dp"
             android:text="@string/bold_subject"
             android:textColor="#2d2d2d"
@@ -97,7 +95,7 @@
         android:layout_height="wrap_content"
         android:background="#00000000"
         android:gravity="end"
-        android:paddingTop="10dp" >
+        android:paddingTop="10dp">
 
         <EditText
             android:id="@+id/body"
@@ -105,8 +103,8 @@
             android:layout_height="match_parent"
             android:layout_above="@+id/divider"
             android:layout_alignParentEnd="true"
-            android:layout_alignParentRight="true"
             android:layout_alignParentLeft="true"
+            android:layout_alignParentRight="true"
             android:layout_alignParentTop="true"
             android:layout_marginTop="129dp"
             android:background="#f2f2f2"

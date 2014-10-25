@@ -17,37 +17,35 @@
         android:id="@+id/circularImageView1"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:scaleType="centerInside"
-        android:src="@drawable/account_circle"
         android:layout_above="@+id/myTextView1"
-        android:layout_centerHorizontal="true" />
+        android:layout_centerHorizontal="true"
+        android:scaleType="centerInside"
+        android:src="@drawable/account_circle" />
 
     <com.kyler.toolbarmenudrawer.ToolbarMenudrawerTextView
         android:id="@+id/myTextView1"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+        android:layout_above="@+id/myTextView2"
+        android:layout_centerHorizontal="true"
+        android:gravity="top"
         android:text="@string/my_name"
         android:textColor="#fffafafa"
         android:textSize="18.0sp"
-        customfontdemo:fontName="Roboto-Regular.ttf"
-        android:layout_above="@+id/myTextView2"
-        android:layout_centerHorizontal="true"
-        android:gravity="top" />
+        customfontdemo:fontName="Roboto-Regular.ttf" />
 
     <com.kyler.toolbarmenudrawer.ToolbarMenudrawerTextView
         android:id="@+id/myTextView2"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+        android:layout_alignBottom="@+id/imageView1"
+        android:layout_centerHorizontal="true"
+        android:layout_marginBottom="16dp"
+        android:paddingBottom="10dp"
         android:text="@string/my_email_demo"
         android:textColor="#ffe5e5e5"
         android:textSize="14.0sp"
-        customfontdemo:fontName="Roboto-Light.ttf"
-        android:layout_marginBottom="16dp"
-        android:layout_alignBottom="@+id/imageView1"
-        android:layout_centerHorizontal="true"
-        android:paddingBottom="10dp" />
-
-
+        customfontdemo:fontName="Roboto-Light.ttf" />
 
 
 </RelativeLayout>

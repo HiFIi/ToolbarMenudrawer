@@ -8,8 +8,8 @@ android {
         applicationId "com.kyler.ToolbarMenudrawer"
         minSdkVersion 14
         targetSdkVersion 21
-        versionCode="7"
-        versionName="0.0.4.0"
+        versionCode = "9"
+        versionName = "0.0.4.2"
     }
 
     buildTypes {

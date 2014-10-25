@@ -3,48 +3,48 @@
     xmlns:customfontdemo="http://schemas.android.com/apk/res-auto"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="#fafafa" >
+    android:background="#fafafa">
 
     <ImageView
+        android:id="@+id/imageView3"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:id="@+id/imageView3"
-        android:layout_centerVertical="true"
         android:layout_centerHorizontal="true"
-        android:scaleType="fitCenter"
-        android:cropToPadding="true"
+        android:layout_centerVertical="true"
         android:adjustViewBounds="true"
+        android:cropToPadding="true"
         android:padding="40dp"
+        android:scaleType="fitCenter"
         android:src="@drawable/larger_icon_for_splash" />
 
     <com.kyler.toolbarmenudrawer.ToolbarMenudrawerTextView
         android:id="@+id/appNameTextView"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:textColor="#ff606060"
-        android:textSize="22.0sp"
-        android:gravity="center"
-        android:text="@string/app_name"
-        customfontdemo:fontName="RobotoCondensed-Regular.ttf"
-        android:layout_alignParentRight="true"
+        android:layout_above="@+id/splashContinueButton"
         android:layout_alignParentEnd="true"
         android:layout_alignParentLeft="true"
+        android:layout_alignParentRight="true"
         android:layout_alignParentStart="true"
         android:layout_below="@+id/imageView3"
-        android:layout_above="@+id/splashContinueButton" />
+        android:gravity="center"
+        android:text="@string/app_name"
+        android:textColor="#ff606060"
+        android:textSize="22.0sp"
+        customfontdemo:fontName="RobotoCondensed-Regular.ttf" />
 
     <Button
+        android:id="@+id/splashContinueButton"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="Continue"
-        android:id="@+id/splashContinueButton"
-        android:textColor="#fafafa"
-        android:background="@drawable/splash_material_continuebutton_ripple"
         android:layout_alignParentBottom="true"
-        android:layout_alignParentRight="true"
         android:layout_alignParentEnd="true"
         android:layout_alignParentLeft="true"
+        android:layout_alignParentRight="true"
         android:layout_alignParentStart="true"
+        android:background="@drawable/splash_material_continuebutton_ripple"
+        android:text="Continue"
+        android:textColor="#fafafa"
         android:visibility="gone" />
 
 </RelativeLayout>

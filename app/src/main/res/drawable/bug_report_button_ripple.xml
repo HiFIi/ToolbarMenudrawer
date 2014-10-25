@@ -1,6 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
 <ripple xmlns:android="http://schemas.android.com/apk/res/android"
     android:color="#a7291e">
-    <item android:drawable="@drawable/bug_report_button" >
-    </item>
+    <item android:drawable="@drawable/bug_report_button"></item>
 </ripple>

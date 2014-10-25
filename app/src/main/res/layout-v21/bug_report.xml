@@ -1,6 +1,4 @@
-<RelativeLayout
-    xmlns:android="http://schemas.android.com/apk/res/android"
-    xmlns:app="http://schemas.android.com/apk/res-auto"
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
@@ -11,24 +9,24 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:background="#f2f2f2"
-        android:paddingBottom="-30dp" >
+        android:paddingBottom="-30dp">
 
-        <EditText
+        <TextView
             android:id="@+id/reportBoldRecipient"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_alignParentTop="true"
             android:layout_centerHorizontal="true"
+            android:editable="false"
+            android:enabled="false"
             android:fontFamily="sans-serif-thin"
             android:gravity="center"
             android:paddingTop="10dp"
             android:text="@string/recipient_bold"
             android:textColor="#2d2d2d"
             android:textSize="20sp"
-            android:enabled="false"
-            tools:ignore="SpUsage"
-            android:editable="false"
-            android:typeface="normal" />
+            android:typeface="normal"
+            tools:ignore="SpUsage" />
 
         <EditText
             android:id="@+id/Reportrecipient"
@@ -37,15 +35,15 @@
             android:layout_alignParentLeft="true"
             android:layout_below="@+id/reportBoldRecipient"
             android:background="#00000000"
+            android:editable="false"
             android:ems="10"
+            android:enabled="false"
             android:fontFamily="sans-serif-light"
             android:gravity="center"
             android:hint="@string/recipient"
             android:inputType="none"
             android:paddingTop="7dp"
             android:text="@string/my_email"
-            android:editable="false"
-            android:enabled="false"
             android:textColor="#242424"
             android:textSize="18dp"
             android:textStyle="bold"
@@ -59,7 +57,9 @@
             android:layout_alignParentRight="true"
             android:layout_below="@+id/ReportBoldSubject"
             android:background="#00000000"
+            android:editable="false"
             android:ems="10"
+            android:enabled="false"
             android:fontFamily="sans-serif-light"
             android:gravity="center"
             android:hint="@string/subject"
@@ -69,8 +69,6 @@
             android:textColor="#242424"
             android:textSize="18dp"
             android:textStyle="bold"
-            android:editable="false"
-            android:enabled="false"
             tools:ignore="SpUsage" />
 
         <TextView
@@ -80,10 +78,10 @@
             android:layout_alignParentLeft="true"
             android:layout_alignParentRight="true"
             android:layout_below="@+id/Reportrecipient"
-            android:fontFamily="sans-serif-thin"
-            android:gravity="center"
             android:editable="false"
             android:enabled="false"
+            android:fontFamily="sans-serif-thin"
+            android:gravity="center"
             android:paddingTop="10dp"
             android:text="@string/bold_subject"
             android:textColor="#2d2d2d"
@@ -97,7 +95,7 @@
         android:layout_height="wrap_content"
         android:background="#00000000"
         android:gravity="end"
-        android:paddingTop="10dp" >
+        android:paddingTop="10dp">
 
         <EditText
             android:id="@+id/Reportbody"
@@ -105,11 +103,11 @@
             android:layout_height="match_parent"
             android:layout_above="@+id/Reportdivider"
             android:layout_alignParentEnd="true"
-            android:layout_alignParentRight="true"
             android:layout_alignParentLeft="true"
+            android:layout_alignParentRight="true"
             android:layout_alignParentTop="true"
             android:layout_marginTop="129dp"
-            android:background="#f2f2f2"
+            android:background="#00000000"
             android:ems="10"
             android:fitsSystemWindows="true"
             android:gravity="top"
@@ -123,19 +121,6 @@
 
             <requestFocus />
         </EditText>
-
-        <View
-            android:id="@+id/Reportdivider2"
-            android:layout_width="match_parent"
-            android:layout_height="2.00dp"
-            android:layout_alignTop="@id/Reportbody"
-            android:layout_marginLeft="7dp"
-            android:layout_marginRight="7dp"
-            android:layout_marginTop="7dp"
-            android:background="#d5d5d5"
-            android:paddingLeft="7dp"
-            android:paddingRight="7dp"
-            android:visibility="visible" />
 
         <Button
             android:id="@+id/ReportsendEmail"
