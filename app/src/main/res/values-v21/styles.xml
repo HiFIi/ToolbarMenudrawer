@@ -1,5 +1,5 @@
 <resources>
-    <!-- inherit from the material theme -->
+
     <style name="ToolbarMenudrawer.Theme" parent="Theme.AppCompat.NoActionBar">
         <item name="colorPrimary">#303f9f</item>
         <item name="colorPrimaryDark">#1a237e</item>
@@ -21,6 +21,31 @@
     </style>
 
     <style name="ToolbarMenudrawer.ActionBar.TitleTextStyle.Theme" parent="TextAppearance.AppCompat.Widget.ActionBar.Title">
+        <item name="android:textColorHint">@android:color/transparent</item>
+        <item name="android:textColor">@android:color/transparent</item>
+    </style>
+
+    <style name="WhiteTeal.Theme" parent="android:Theme.Material.Light">
+        <item name="colorPrimary">#fafafa</item>
+        <item name="colorPrimaryDark">#f7f7f7</item>
+        <item name="colorAccent">#303f9f</item>
+        <item name="android:windowContentOverlay">@null</item>
+        <item name="android:windowActionBarOverlay">true</item>
+        <item name="windowActionBar">false</item>
+        <item name="android:actionBarStyle">@style/WhiteTeal.Actionbar.Theme</item>
+        <item name="android:windowBackground">@color/background_material_light</item>
+    </style>
+
+    <style name="WhiteTeal.Actionbar.Theme" parent="android:Widget.Material.Light.ActionBar">
+        <item name="android:background">#FF34495e</item>
+        <item name="android:titleTextStyle">
+            @style/WhiteTeal.ActionBar.TitleTextStyle.Theme
+        </item>
+        <item name="android:height">58.0dip</item>
+        <item name="android:icon">@android:color/transparent</item>
+    </style>
+
+    <style name="WhiteTeal.ActionBar.TitleTextStyle.Theme" parent="android:TextAppearance.Material.Widget.ActionBar.Title">
         <item name="android:textColorHint">@android:color/transparent</item>
         <item name="android:textColor">@android:color/transparent</item>
     </style>

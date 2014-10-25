@@ -2,9 +2,14 @@
 <resources>
 
     <color name="background_material_light">#fffafafa</color>
+    <color name="teal">#ff009688</color>
+    <color name="teal_700">#ff00796b</color>
     <color name="navbarcolor_request">#FF0a7e07</color>
     <color name="toolbarcolor_request">#FF0a8f08</color>
     <color name="statusbarcolor_request_darker">#FF056f00</color>
+    <color name="navbarcolor_report">#FFdb4437</color>
+    <color name="toolbarcolor_report">#FFdb4437</color>
+    <color name="statusbarcolor_report_darker">#FFbd2e22</color>
     <color name="navbarcolor">#FF303030</color>
     <color name="toolbarcolor">#FF303f9f</color>
     <color name="statusbarcolor_darker">#FF1a237e</color>

@@ -5,7 +5,7 @@
         android:layout_width="match_parent"
         android:layout_height="match_parent"
         android:background="#f2f2f2"
-    android:paddingTop="58.0dip">
+        android:paddingTop="10dp" >
 
         <RelativeLayout
             android:layout_width="match_parent"
@@ -13,8 +13,8 @@
             android:background="#f2f2f2"
             android:paddingBottom="-30dp" >
 
-            <TextView
-                android:id="@+id/boldRecipient"
+            <EditText
+                android:id="@+id/requestRecipient"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_alignParentTop="true"
@@ -25,7 +25,10 @@
                 android:text="@string/recipient_bold"
                 android:textColor="#2d2d2d"
                 android:textSize="20sp"
-                tools:ignore="SpUsage" />
+                android:enabled="false"
+                tools:ignore="SpUsage"
+                android:editable="false"
+                android:typeface="normal" />
 
             <EditText
                 android:id="@+id/recipient"
@@ -41,6 +44,8 @@
                 android:inputType="none"
                 android:paddingTop="7dp"
                 android:text="@string/my_email"
+                android:editable="false"
+                android:enabled="false"
                 android:textColor="#242424"
                 android:textSize="18dp"
                 android:textStyle="bold"
@@ -64,6 +69,8 @@
                 android:textColor="#242424"
                 android:textSize="18dp"
                 android:textStyle="bold"
+                android:editable="false"
+                android:enabled="false"
                 tools:ignore="SpUsage" />
 
             <TextView
@@ -75,6 +82,8 @@
                 android:layout_below="@+id/recipient"
                 android:fontFamily="sans-serif-thin"
                 android:gravity="center"
+                android:editable="false"
+                android:enabled="false"
                 android:paddingTop="10dp"
                 android:text="@string/bold_subject"
                 android:textColor="#2d2d2d"
@@ -109,7 +118,8 @@
                 android:paddingLeft="15dp"
                 android:paddingRight="15dp"
                 android:paddingTop="25dp"
-                android:textColor="#242424" >
+                android:textColor="#242424"
+                android:textColorHint="#40505050">
 
                 <requestFocus />
             </EditText>
@@ -145,7 +155,7 @@
             <View
                 android:id="@+id/divider"
                 android:layout_width="match_parent"
-                android:layout_height="8dp"
+                android:layout_height="4dp"
                 android:layout_above="@id/sendEmail"
                 android:background="#d5d5d5" />
         </RelativeLayout>

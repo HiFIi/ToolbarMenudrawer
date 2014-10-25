@@ -8,6 +8,7 @@ import android.view.View;
 import android.view.ViewGroup;
 import android.widget.BaseAdapter;
 import android.widget.ImageView;
+import android.widget.ListView;
 import android.widget.TextView;
 
 import com.kyler.toolbarmenudrawer.R;
@@ -24,6 +25,7 @@ public class ToolbarMenudrawerAdapter extends BaseAdapter {
                                     ArrayList<Icons> navDrawerItems) {
         this.context = context;
         this.navDrawerItems = navDrawerItems;
+
     }
 
     @Override

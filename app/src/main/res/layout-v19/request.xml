@@ -1,152 +1,159 @@
-<RelativeLayout
-    xmlns:android="http://schemas.android.com/apk/res/android"
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#FF056f00"
+    android:fitsSystemWindows="true" >
+
+<RelativeLayout
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:paddingTop="10dp"
+    android:background="#f2f2f2" >
+
+    <RelativeLayout
         android:layout_width="match_parent"
-        android:layout_height="match_parent"
+        android:layout_height="wrap_content"
         android:background="#f2f2f2"
-    android:paddingTop="58.0dip">
+        android:paddingBottom="-30dp" >
 
-        <RelativeLayout
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:background="#f2f2f2"
-            android:paddingBottom="-30dp" >
-
-            <TextView
-                android:id="@+id/boldRecipient"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_alignParentTop="true"
-                android:layout_centerHorizontal="true"
-                android:fontFamily="sans-serif-thin"
-                android:gravity="center"
-                android:paddingTop="10dp"
-                android:text="@string/recipient_bold"
-                android:textColor="#2d2d2d"
-                android:textSize="20sp"
-                tools:ignore="SpUsage" />
-
-            <EditText
-                android:id="@+id/recipient"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:layout_alignParentLeft="true"
-                android:layout_below="@+id/boldRecipient"
-                android:background="#00000000"
-                android:ems="10"
-                android:fontFamily="sans-serif-light"
-                android:gravity="center"
-                android:hint="@string/recipient"
-                android:inputType="none"
-                android:paddingTop="7dp"
-                android:text="@string/my_email"
-                android:textColor="#242424"
-                android:textSize="18dp"
-                android:textStyle="bold"
-                tools:ignore="SpUsage" />
-
-            <EditText
-                android:id="@+id/subject"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_alignParentLeft="true"
-                android:layout_alignParentRight="true"
-                android:layout_below="@+id/boldSubject"
-                android:background="#00000000"
-                android:ems="10"
-                android:fontFamily="sans-serif-light"
-                android:gravity="center"
-                android:hint="@string/subject"
-                android:inputType="none"
-                android:paddingTop="7dp"
-                android:text="@string/feature_request"
-                android:textColor="#242424"
-                android:textSize="18dp"
-                android:textStyle="bold"
-                tools:ignore="SpUsage" />
-
-            <TextView
-                android:id="@+id/boldSubject"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_alignParentLeft="true"
-                android:layout_alignParentRight="true"
-                android:layout_below="@+id/recipient"
-                android:fontFamily="sans-serif-thin"
-                android:gravity="center"
-                android:paddingTop="10dp"
-                android:text="@string/bold_subject"
-                android:textColor="#2d2d2d"
-                android:textSize="20dp"
-                tools:ignore="SpUsage" />
-        </RelativeLayout>
-
-        <RelativeLayout
-            android:id="@+id/rl2"
+        <TextView
+            android:id="@+id/boldRecipient"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
+            android:layout_alignParentTop="true"
+            android:layout_centerHorizontal="true"
+            android:fontFamily="sans-serif-thin"
+            android:gravity="center"
+            android:paddingTop="10dp"
+            android:text="@string/recipient_bold"
+            android:textColor="#2d2d2d"
+            android:textSize="20sp"
+            tools:ignore="SpUsage" />
+
+        <EditText
+            android:id="@+id/recipient"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_alignParentLeft="true"
+            android:layout_below="@+id/boldRecipient"
             android:background="#00000000"
-            android:gravity="end"
-            android:paddingTop="10dp" >
+            android:ems="10"
+            android:fontFamily="sans-serif-light"
+            android:gravity="center"
+            android:hint="@string/recipient"
+            android:inputType="none"
+            android:paddingTop="7dp"
+            android:text="@string/my_email"
+            android:textColor="#242424"
+            android:textSize="18dp"
+            android:textStyle="bold"
+            tools:ignore="SpUsage" />
 
-            <EditText
-                android:id="@+id/body"
-                android:layout_width="wrap_content"
-                android:layout_height="match_parent"
-                android:layout_above="@+id/divider"
-                android:layout_alignParentEnd="true"
-                android:layout_alignParentRight="true"
-                android:layout_alignParentLeft="true"
-                android:layout_alignParentTop="true"
-                android:layout_marginTop="129dp"
-                android:background="#f2f2f2"
-                android:ems="10"
-                android:fitsSystemWindows="true"
-                android:gravity="top"
-                android:hint="@string/message_body"
-                android:inputType="textCapSentences"
-                android:paddingLeft="15dp"
-                android:paddingRight="15dp"
-                android:paddingTop="25dp"
-                android:textColor="#242424" >
+        <EditText
+            android:id="@+id/subject"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentLeft="true"
+            android:layout_alignParentRight="true"
+            android:layout_below="@+id/boldSubject"
+            android:background="#00000000"
+            android:ems="10"
+            android:fontFamily="sans-serif-light"
+            android:gravity="center"
+            android:hint="@string/subject"
+            android:inputType="none"
+            android:paddingTop="7dp"
+            android:text="@string/feature_request"
+            android:textColor="#242424"
+            android:textSize="18dp"
+            android:textStyle="bold"
+            tools:ignore="SpUsage" />
 
-                <requestFocus />
-            </EditText>
-
-            <View
-                android:id="@+id/divider2"
-                android:layout_width="match_parent"
-                android:layout_height="2.00dp"
-                android:layout_alignTop="@id/body"
-                android:layout_marginLeft="7dp"
-                android:layout_marginRight="7dp"
-                android:layout_marginTop="7dp"
-                android:background="#d5d5d5"
-                android:paddingLeft="7dp"
-                android:paddingRight="7dp"
-                android:visibility="visible" />
-
-            <Button
-                android:id="@+id/sendEmail"
-                android:layout_width="wrap_content"
-                android:layout_height="55dp"
-                android:layout_alignParentBottom="true"
-                android:layout_alignParentLeft="true"
-                android:layout_alignParentRight="true"
-                android:background="@drawable/sendbutton"
-                android:fontFamily="sans-serif-thin"
-                android:text="@string/send"
-                android:textColor="#e5e8ed"
-                android:textSize="22dp"
-                android:textStyle="bold"
-                tools:ignore="SpUsage" />
-
-            <View
-                android:id="@+id/divider"
-                android:layout_width="match_parent"
-                android:layout_height="8dp"
-                android:layout_above="@id/sendEmail"
-                android:background="#d5d5d5" />
-        </RelativeLayout>
+        <TextView
+            android:id="@+id/boldSubject"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentLeft="true"
+            android:layout_alignParentRight="true"
+            android:layout_below="@+id/recipient"
+            android:fontFamily="sans-serif-thin"
+            android:gravity="center"
+            android:paddingTop="10dp"
+            android:text="@string/bold_subject"
+            android:textColor="#2d2d2d"
+            android:textSize="20dp"
+            tools:ignore="SpUsage" />
     </RelativeLayout>
+
+    <RelativeLayout
+        android:id="@+id/rl2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:background="#00000000"
+        android:gravity="end"
+        android:paddingTop="10dp" >
+
+        <EditText
+            android:id="@+id/body"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:layout_above="@+id/divider"
+            android:layout_alignParentEnd="true"
+            android:layout_alignParentRight="true"
+            android:layout_alignParentLeft="true"
+            android:layout_alignParentTop="true"
+            android:layout_marginTop="129dp"
+            android:background="#f2f2f2"
+            android:ems="10"
+            android:fitsSystemWindows="true"
+            android:gravity="top"
+            android:hint="@string/message_body"
+            android:textColorHint="#4D505050"
+            android:inputType="textCapSentences"
+            android:paddingLeft="15dp"
+            android:paddingRight="15dp"
+            android:paddingTop="25dp"
+            android:textColor="#242424" >
+
+            <requestFocus />
+        </EditText>
+
+        <View
+            android:id="@+id/divider2"
+            android:layout_width="match_parent"
+            android:layout_height="2.00dp"
+            android:layout_alignTop="@id/body"
+            android:layout_marginLeft="7dp"
+            android:layout_marginRight="7dp"
+            android:layout_marginTop="7dp"
+            android:background="#d5d5d5"
+            android:paddingLeft="7dp"
+            android:paddingRight="7dp"
+            android:visibility="visible" />
+
+        <Button
+            android:id="@+id/sendEmail"
+            android:layout_width="wrap_content"
+            android:layout_height="55dp"
+            android:layout_alignParentBottom="true"
+            android:layout_alignParentLeft="true"
+            android:layout_alignParentRight="true"
+            android:background="@drawable/sendbutton"
+            android:fontFamily="sans-serif-thin"
+            android:text="@string/send"
+            android:textColor="#e5e8ed"
+            android:textSize="22dp"
+            android:textStyle="bold"
+            tools:ignore="SpUsage" />
+
+        <View
+            android:id="@+id/divider"
+            android:layout_width="match_parent"
+            android:layout_height="8dp"
+            android:layout_above="@id/sendEmail"
+            android:background="#d5d5d5" />
+    </RelativeLayout>
+</RelativeLayout>
+</FrameLayout>

@@ -2,9 +2,9 @@
 
 <FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/dynamicFrameLayoutBG"
     android:layout_width="match_parent"
-    android:layout_height="match_parent"
-    android:background="#3f51b5">
+    android:layout_height="match_parent" >
 
     <android.support.v4.widget.DrawerLayout
         android:id="@+id/drawer_layout"
@@ -21,6 +21,22 @@
             android:layout_height="fill_parent"
             android:layout_marginTop="?attr/actionBarSize"
             android:background="#fffafafa"></FrameLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical">
+
+            <android.support.v7.widget.Toolbar
+                android:id="@+id/toolbar"
+                android:layout_width="match_parent"
+                android:layout_height="?attr/actionBarSize"
+                android:background="#303f9f"
+                android:gravity="top"
+                android:minHeight="58.0dip"
+                app:popupTheme="@style/ThemeOverlay.AppCompat.Light"
+                app:theme="@style/ThemeOverlay.AppCompat.Dark.ActionBar" />
+        </LinearLayout>
 
 
         <ListView
@@ -39,21 +55,5 @@
             android:scrollbars="none"
             android:scrollingCache="true" />
     </android.support.v4.widget.DrawerLayout>
-
-    <LinearLayout
-        android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        android:orientation="vertical">
-
-        <android.support.v7.widget.Toolbar
-            android:id="@+id/toolbar"
-            android:layout_width="match_parent"
-            android:layout_height="?attr/actionBarSize"
-            android:background="#303f9f"
-            android:gravity="top"
-            android:minHeight="58.0dip"
-            app:popupTheme="@style/ThemeOverlay.AppCompat.Light"
-            app:theme="@style/ThemeOverlay.AppCompat.Dark.ActionBar" />
-    </LinearLayout>
 
 </FrameLayout>
