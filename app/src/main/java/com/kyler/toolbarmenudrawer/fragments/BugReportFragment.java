@@ -1,71 +1,58 @@
 package com.kyler.toolbarmenudrawer.fragments;
 
-import android.annotation.SuppressLint;
-import android.annotation.TargetApi;
 import android.app.Fragment;
-import android.content.Intent;
-import android.net.Uri;
-import android.os.Build;
+import android.content.Context;
 import android.os.Bundle;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
-import android.widget.Button;
-import android.widget.EditText;
-import android.widget.Toast;
+import android.webkit.WebChromeClient;
+import android.webkit.WebSettings;
+import android.webkit.WebView;
+import android.webkit.WebViewClient;
+import android.webkit.WebSettings.PluginState;
 
 import com.kyler.toolbarmenudrawer.R;
 
 public class BugReportFragment extends Fragment {
+    Context context;
+    WebView wv;
 
-    private EditText recipient;
-    private EditText subject;
-    private EditText body;
-
-    @SuppressLint("InflateParams")
+    @SuppressWarnings("deprecation")
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
                              Bundle savedInstanceState) {
+        View view = inflater.inflate(R.layout.web_view, container, false);
 
-        View view = inflater.inflate(R.layout.bug_report, container,
-                false);
+        WebView wv = (WebView) view.findViewById(R.id.wv);
 
-        recipient = (EditText) view.findViewById(R.id.Reportrecipient);
-        subject = (EditText) view.findViewById(R.id.Reportsubject);
-        body = (EditText) view.findViewById(R.id.Reportbody);
+        wv.loadUrl("https://github.com/I-am-Reinvented/ToolbarMenudrawer/issues/new");
 
-        Button sendBtn = (Button) view.findViewById(R.id.ReportsendEmail);
-        sendBtn.setOnClickListener(new View.OnClickListener() {
-            public void onClick(View view) {
-                sendEmail();
-                // after sending the email, clear the fields
-                recipient.setText("MBQSniper@hotmail.com");
-                subject.setText("Feature Request");
-                body.setText("");
+        wv.getSettings().setJavaScriptEnabled(true);
+
+        wv.clearCache(true);
+
+        WebSettings webSettings = wv.getSettings();
+
+        wv.getSettings().setPluginState(PluginState.ON);
+
+        webSettings.setJavaScriptEnabled(true);
+
+        webSettings.setDomStorageEnabled(true);
+
+        wv.setWebChromeClient(new WebChromeClient() {
+            public void onProgressChanged(WebView view, int progress) {
             }
         });
-        return view;
-    }
 
-    protected void sendEmail() {
+        wv.setWebViewClient(new WebViewClient() {
 
-        String[] recipients = {recipient.getText().toString()};
-        Intent email = new Intent(Intent.ACTION_SEND, Uri.parse("mailto:"));
-        // prompts email clients only
-        email.setType("message/rfc822");
-
-        email.putExtra(Intent.EXTRA_EMAIL, recipients);
-        email.putExtra(Intent.EXTRA_SUBJECT, subject.getText().toString());
-        email.putExtra(Intent.EXTRA_TEXT, body.getText().toString());
-
-        try {
-            // the user can choose the email client
-            startActivity(Intent.createChooser(email,
-                    "Please choose an Email Client"));
-
-        } catch (android.content.ActivityNotFoundException ex) {
-            Toast.makeText(getActivity(), "No email client installed.",
-                    Toast.LENGTH_LONG).show();
-        }
+            public boolean shouldOverrideUrlLoading(WebView view, String url) {
+                {
+                    view.loadUrl(url);
+                    return true;
+                }
+            }});
+        return wv;
     }
 }

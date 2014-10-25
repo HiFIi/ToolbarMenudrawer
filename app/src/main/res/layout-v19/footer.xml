@@ -19,7 +19,7 @@
         android:layout_width="fill_parent"
         android:layout_height="wrap_content"
         android:gravity="left"
-        android:background="@drawable/footer_button_with_ripple"
+        android:background="@drawable/footer_button_ripple"
         android:textColor="#ff101010"
         android:textSize="15.0sp"
         android:paddingTop="24dp"
