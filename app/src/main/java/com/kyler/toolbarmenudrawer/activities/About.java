@@ -14,9 +14,7 @@ public class About extends Activity {
     @SuppressLint("InlinedApi")
     @Override
     protected void onCreate(Bundle savedInstanceState) {
-
         super.onCreate(savedInstanceState);
-
-    setContentView(R.layout.about);
-}
+        setContentView(R.layout.about);
+    }
 }

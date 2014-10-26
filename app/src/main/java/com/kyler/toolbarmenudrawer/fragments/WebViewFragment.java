@@ -1,29 +1,30 @@
 package com.kyler.toolbarmenudrawer.fragments;
 
 import android.app.Fragment;
-import android.content.Context;
+import android.content.Intent;
+import android.net.Uri;
 import android.os.Bundle;
-import android.view.KeyEvent;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.webkit.DownloadListener;
 import android.webkit.WebChromeClient;
 import android.webkit.WebSettings;
 import android.webkit.WebView;
 import android.webkit.WebViewClient;
-import android.webkit.WebSettings.PluginState;
 
 import com.kyler.toolbarmenudrawer.R;
 
-public class BugReportFragment extends Fragment {
+
+public class WebViewFragment extends Fragment {
 
     private WebView wv;
 
-    public BugReportFragment(){
+    public WebViewFragment() {
     }
 
-    public static BugReportFragment newInstance() {
-        return new BugReportFragment();
+    public static WebViewFragment newInstance() {
+        return new WebViewFragment();
     }
 
     @SuppressWarnings("deprecation")
@@ -33,14 +34,36 @@ public class BugReportFragment extends Fragment {
 
         wv = (WebView) view.findViewById(R.id.wv);
 
-        wv.loadUrl("https://github.com/I-am-Reinvented/ToolbarMenudrawer/issues/new");
+        /* Use this to make the webview link convert from Mobile to Desktop. ;)
+
+        wv.getSettings().setUserAgentString("Mozilla/5.0 " +
+                "(Windows NT 6.2; " +
+                "WOW64) AppleWebKit/537.31 " +
+                "(KHTML, like Gecko) Chrome/20 " +
+                "Safari/537.31"); */
+
+        wv.loadUrl("https://google.com");
         wv.getSettings().setJavaScriptEnabled(true);
         wv.clearCache(true);
 
         WebSettings webSettings = wv.getSettings();
-        wv.getSettings().setPluginState(PluginState.ON);
+        wv.getSettings().setPluginState(WebSettings.PluginState.ON);
         webSettings.setJavaScriptEnabled(true);
         webSettings.setDomStorageEnabled(true);
+
+        /*wv.setDownloadListener(new DownloadListener() {
+
+            @Override
+            public void onDownloadStart(String url, String userAgent,
+                                        String contentDisposition, String mimetype,
+                                        long contentLength) {
+
+                Uri uri = Uri.parse(url);
+                Intent intent = new Intent(Intent.ACTION_VIEW, uri);
+                startActivity(intent);
+
+            }
+        });*/
 
         wv.setWebChromeClient(new WebChromeClient() {
             public void onProgressChanged(WebView view, int progress) {
