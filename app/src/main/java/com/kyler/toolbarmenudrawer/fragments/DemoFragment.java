@@ -10,12 +10,13 @@ import com.kyler.toolbarmenudrawer.R;
 
 public class DemoFragment extends Fragment {
 
-    @Override
-    public View onCreateView(LayoutInflater inflater, ViewGroup container,
-                             Bundle savedInstanceState) {
+    public DemoFragment(){
 
-        View rootView = inflater.inflate(R.layout.fragment_for_this_example, container,
-                false);
-        return rootView;
+    }
+
+    @Override
+    public View onCreateView(LayoutInflater inflater, ViewGroup container, Bundle savedInstanceState) {
+
+        return inflater.inflate(R.layout.fragment_for_this_example, container, false);
     }
 }
