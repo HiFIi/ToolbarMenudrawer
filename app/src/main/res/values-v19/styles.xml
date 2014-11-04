@@ -4,7 +4,7 @@
         <item name="android:windowContentOverlay">@null</item>
         <item name="windowActionBar">false</item>
         <item name="android:windowTranslucentStatus">true</item>
-        <item name="android:windowTranslucentNavigation">true</item>
+        <item name="android:windowTranslucentNavigation">false</item>
         <item name="android:fitsSystemWindows">true</item>
         <item name="android:actionBarStyle">@style/ToolbarMenudrawer.Actionbar.Theme</item>
     </style>
@@ -47,6 +47,49 @@
     </style>
 
     <style name="WhiteTeal.ActionBar.TitleTextStyle.Theme" parent="android:TextAppearance.Holo.Widget.ActionBar.Title">
+        <item name="android:textColorHint">@android:color/transparent</item>
+        <item name="android:textColor">@android:color/transparent</item>
+    </style>
+
+    <style name="WebViewDemo.Theme" parent="android:Theme.Holo">
+        <item name="android:windowContentOverlay">@null</item>
+        <item name="android:windowActionBarOverlay">true</item>
+        <item name="android:fitsSystemWindows">true</item>
+        <item name="android:windowTranslucentStatus">true</item>
+        <item name="android:actionBarStyle">@style/WebViewDemo.Actionbar.Theme</item>
+    </style>
+
+    <style name="WebViewDemo.Actionbar.Theme" parent="android:Widget.Holo.ActionBar">
+        <item name="android:background">#1565C0</item>
+        <item name="android:titleTextStyle">
+            @style/WebViewDemo.Theme.ActionBar.TitleTextStyle
+        </item>
+        <item name="android:icon">@android:color/transparent</item>
+    </style>
+
+    <style name="WebViewDemo.Theme.ActionBar.TitleTextStyle" parent="android:TextAppearance.Holo.Widget.ActionBar.Title">
+        <item name="android:textColorHint">@android:color/transparent</item>
+        <item name="android:textColor">@android:color/transparent</item>
+    </style>
+
+    <style name="ReportABug.Theme" parent="android:Theme.Holo.Light.DarkActionBar">
+        <item name="android:windowContentOverlay">@null</item>
+        <item name="android:windowActionBarOverlay">true</item>
+        <item name="android:actionBarStyle">@style/ReportABug.Actionbar.Theme</item>
+        <item name="android:windowTranslucentStatus">true</item>
+        <item name="android:fitsSystemWindows">true</item>
+    </style>
+
+    <style name="ReportABug.Actionbar.Theme" parent="android:Widget.Holo.ActionBar">
+        <item name="android:background">#db4437</item>
+        <item name="android:titleTextStyle">
+            @style/ReportABug.ActionBar.TitleTextStyle.Theme
+        </item>
+        <item name="android:height">48.0dip</item>
+        <item name="android:icon">@android:color/transparent</item>
+    </style>
+
+    <style name="ReportABug.ActionBar.TitleTextStyle.Theme" parent="android:TextAppearance.Holo.Widget.ActionBar.Title">
         <item name="android:textColorHint">@android:color/transparent</item>
         <item name="android:textColor">@android:color/transparent</item>
     </style>

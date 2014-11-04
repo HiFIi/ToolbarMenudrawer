@@ -3,6 +3,7 @@
 <FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     android:id="@+id/dynamicFrameLayoutBG"
+    android:background="@color/teal"
     android:layout_width="match_parent"
     android:layout_height="match_parent">
 
@@ -31,11 +32,11 @@
                 android:id="@+id/toolbar"
                 android:layout_width="match_parent"
                 android:layout_height="?attr/actionBarSize"
-                android:background="#303f9f"
+                android:background="@color/teal"
                 android:gravity="top"
                 android:minHeight="58.0dip"
-                app:popupTheme="@style/ThemeOverlay.AppCompat.Light"
-                app:theme="@style/ThemeOverlay.AppCompat.Dark.ActionBar" />
+                app:popupTheme="@style/ThemeOverlay.AppCompat.Dark"
+                app:theme="@style/ThemeOverlay.AppCompat.ActionBar" />
         </LinearLayout>
 
 
@@ -44,7 +45,7 @@
             android:layout_width="@dimen/nav_drawer_width_custom"
             android:layout_height="fill_parent"
             android:layout_gravity="start"
-            android:background="#fff2f2f2"
+            android:background="#fff9f9f9"
             android:choiceMode="singleChoice"
             android:divider="#00000000"
             android:dividerHeight="1.00dp"

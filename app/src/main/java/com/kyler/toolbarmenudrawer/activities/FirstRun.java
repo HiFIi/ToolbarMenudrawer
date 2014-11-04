@@ -70,7 +70,6 @@ public class FirstRun extends Activity {
                 Intent continueIntent = new Intent(FirstRun.this, ToolbarMenudrawer.class);
                 startActivity(continueIntent);
                 finish();
-
             }
         });
 

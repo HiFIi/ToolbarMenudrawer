@@ -29,7 +29,7 @@
         android:layout_above="@+id/myTextView2"
         android:layout_centerHorizontal="true"
         android:gravity="top"
-        android:text="@string/my_name"
+        android:text="@string/my_name_demo"
         android:textColor="#fffafafa"
         android:textSize="18.0sp"
         customfontdemo:fontName="Roboto-Regular.ttf" />

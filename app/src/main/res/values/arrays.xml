@@ -13,4 +13,10 @@
         <item>@drawable/web</item>
     </array>
 
+    <array name="daytime">
+        <item>10:00</item>
+        <item>1000</item>
+        <item>2:00</item>
+    </array>
+
 </resources>

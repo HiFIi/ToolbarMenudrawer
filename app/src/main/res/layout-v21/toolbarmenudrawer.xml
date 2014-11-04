@@ -5,42 +5,42 @@
     android:id="@+id/drawer_layout"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="#fffafafa"
-    android:fadingEdge="horizontal"
-    android:fitsSystemWindows="true"
-    android:hapticFeedbackEnabled="false"
-    android:overScrollMode="never">
+    app:insetForeground="#ff2d2d2d"
+    android:fitsSystemWindows="true" >
 
     <FrameLayout
         android:id="@+id/content_frame"
         android:layout_width="fill_parent"
         android:layout_height="fill_parent"
-        android:layout_marginTop="?attr/actionBarSize"
-        android:background="#fffafafa"></FrameLayout>
+        android:background="#fff7f7f7">
+
+
+    </FrameLayout>
 
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        android:layout_marginTop="?attr/actionBarSize"
         android:orientation="vertical">
 
         <android.support.v7.widget.Toolbar
             android:id="@+id/toolbar"
             android:layout_width="match_parent"
-            android:layout_height="58.0dip"
-            android:background="#303f9f"
+            android:layout_height="wrap_content"
+            android:background="?attr/colorPrimary"
+            android:minHeight="?attr/actionBarSize"
             app:popupTheme="@style/ThemeOverlay.AppCompat.Light"
-            app:theme="@style/ThemeOverlay.AppCompat.Dark.ActionBar" />
+            app:theme="@style/ThemeOverlay.AppCompat.ActionBar" />
 
     </LinearLayout>
 
 
     <ListView
         android:id="@+id/left_drawer"
-        android:layout_width="340.0dip"
+        android:fitsSystemWindows="true"
+        android:layout_width="match_parent"
         android:layout_height="fill_parent"
-        android:layout_gravity="start"
-        android:background="#fff2f2f2"
+        android:layout_gravity="left|start"
+        android:background="#fff9f9f9"
         android:choiceMode="singleChoice"
         android:divider="#00000000"
         android:dividerHeight="1.00dp"
@@ -49,5 +49,7 @@
         android:orientation="vertical"
         android:overScrollMode="never"
         android:scrollbars="none"
-        android:scrollingCache="true" />
+        android:layout_marginRight="72dp"
+        android:drawSelectorOnTop="true" />
+
 </android.support.v4.widget.DrawerLayout>

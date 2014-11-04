@@ -8,9 +8,9 @@ import android.view.View;
 import android.view.ViewGroup;
 import android.widget.BaseAdapter;
 import android.widget.ImageView;
-import android.widget.TextView;
 
 import com.kyler.toolbarmenudrawer.R;
+import com.kyler.toolbarmenudrawer.ToolbarMenudrawerTextView;
 import com.kyler.toolbarmenudrawer.ui.Icons;
 
 import java.util.ArrayList;
@@ -19,6 +19,8 @@ public class ToolbarMenudrawerAdapter extends BaseAdapter {
 
     private Context context;
     private ArrayList<Icons> navDrawerItems;
+
+    private int[] values;
 
     public ToolbarMenudrawerAdapter(Context context,
                                     ArrayList<Icons> navDrawerItems) {
@@ -54,7 +56,7 @@ public class ToolbarMenudrawerAdapter extends BaseAdapter {
 
         ImageView imgIcon = (ImageView) convertView
                 .findViewById(R.id.iconPicture);
-        TextView txtTitle = (TextView) convertView.findViewById(R.id.MDText);
+        ToolbarMenudrawerTextView txtTitle = (ToolbarMenudrawerTextView) convertView.findViewById(R.id.MDText);
 
         imgIcon.setImageResource(navDrawerItems.get(position).getIcon());
         txtTitle.setText(navDrawerItems.get(position).getTitle());

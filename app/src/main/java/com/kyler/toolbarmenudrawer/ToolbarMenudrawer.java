@@ -1,7 +1,6 @@
 package com.kyler.toolbarmenudrawer;
 
 import android.annotation.SuppressLint;
-import android.annotation.TargetApi;
 import android.app.Fragment;
 import android.app.FragmentTransaction;
 import android.content.Context;
@@ -10,7 +9,6 @@ import android.content.SharedPreferences;
 import android.content.res.Configuration;
 import android.content.res.TypedArray;
 import android.graphics.drawable.RippleDrawable;
-import android.net.Uri;
 import android.os.Build;
 import android.os.Bundle;
 import android.preference.PreferenceManager;
@@ -19,58 +17,56 @@ import android.support.v4.widget.DrawerLayout;
 import android.support.v7.app.ActionBarActivity;
 import android.support.v7.app.ActionBarDrawerToggle;
 import android.support.v7.widget.Toolbar;
+import android.util.TypedValue;
 import android.view.LayoutInflater;
 import android.view.Menu;
 import android.view.MenuInflater;
 import android.view.MenuItem;
 import android.view.View;
 import android.view.ViewGroup;
-import android.webkit.DownloadListener;
-import android.webkit.WebChromeClient;
-import android.webkit.WebSettings;
-import android.webkit.WebView;
-import android.webkit.WebViewClient;
 import android.widget.AdapterView;
 import android.widget.FrameLayout;
 import android.widget.ImageView;
 import android.widget.ListView;
 import android.widget.Toast;
 
-import com.kyler.toolbarmenudrawer.activities.About;
 import com.kyler.toolbarmenudrawer.activities.FirstRun;
+import com.kyler.toolbarmenudrawer.activities.ReportABug;
+import com.kyler.toolbarmenudrawer.activities.WebViewDemoActivity;
 import com.kyler.toolbarmenudrawer.adapter.ToolbarMenudrawerAdapter;
 import com.kyler.toolbarmenudrawer.fragments.BugReportFragment;
 import com.kyler.toolbarmenudrawer.fragments.DemoFragment;
 import com.kyler.toolbarmenudrawer.fragments.RequestFragment;
+import com.kyler.toolbarmenudrawer.fragments.WebViewFragment;
 import com.kyler.toolbarmenudrawer.ui.Icons;
 
 import java.util.ArrayList;
-
-import static com.kyler.toolbarmenudrawer.R.color.toolbarcolor;
+import java.util.Calendar;
 
 public class ToolbarMenudrawer extends ActionBarActivity {
 
+    private static int NUMBER_OF_CORES =
+            Runtime.getRuntime().availableProcessors();
     final Context context = this;
     public ImageView iv;
     public RippleDrawable rb;
+    public Toolbar mToolbar;
     Fragment demo = new DemoFragment();
     Fragment request = new RequestFragment();
     Fragment report = new BugReportFragment();
     Fragment WebViewDemo = new WebViewFragment();
+    FrameLayout fl;
+    int hour = Calendar.getInstance().get(Calendar.HOUR_OF_DAY);
     private DrawerLayout mDrawerLayout;
     private ListView mDrawerList;
     private ActionBarDrawerToggle mDrawerToggle;
-
     @SuppressWarnings("unused")
     private CharSequence mDrawerTitle;
-
     private CharSequence mTitle;
     private ArrayList<Icons> icons;
     private ToolbarMenudrawerAdapter adapter;
     private String[] MDTitles;
     private TypedArray MDIcons;
-    public Toolbar mToolbar;
-    WebView wv;
 
     @SuppressLint("InlinedApi")
     @Override
@@ -108,7 +104,10 @@ public class ToolbarMenudrawer extends ActionBarActivity {
 
         mTitle = mDrawerTitle = getTitle();
 
+        fl = (FrameLayout) findViewById(R.id.content_frame);
+
         mDrawerLayout = (DrawerLayout) findViewById(R.id.drawer_layout);
+
 
         mDrawerList = (ListView) findViewById(R.id.left_drawer);
 
@@ -142,6 +141,15 @@ public class ToolbarMenudrawer extends ActionBarActivity {
         final ViewGroup footer = (ViewGroup) inflater.inflate(R.layout.footer,
                 mDrawerList, false);
 
+        if (Build.VERSION.SDK_INT == Build.VERSION_CODES.LOLLIPOP) {
+
+            TypedValue typedValue = new TypedValue();
+            context.getTheme().resolveAttribute(R.attr.colorPrimary, typedValue, true);
+            final int color = typedValue.data;
+            mDrawerLayout.setStatusBarBackgroundColor(color);
+
+        }
+
         // Give your Toolbar a subtitle!
         /* mToolbar.setSubtitle("Subtitle"); */
 
@@ -167,24 +175,13 @@ public class ToolbarMenudrawer extends ActionBarActivity {
                 invalidateOptionsMenu();
 
             }
-
-            @Override
-            public void onDrawerSlide(View drawerView, float slideOffset) {
-
-                /* TODO:
-                Add stuff. :p */
-
-            }
         };
 
         mDrawerToggle.syncState();
 
         mDrawerLayout.setDrawerListener(mDrawerToggle);
 
-        if (savedInstanceState == null) {
-
-            selectItem(0);
-        }
+        selectItem(0);
     }
 
     @Override
@@ -228,82 +225,30 @@ public class ToolbarMenudrawer extends ActionBarActivity {
         return super.onOptionsItemSelected(item);
     }
 
-    @TargetApi(Build.VERSION_CODES.LOLLIPOP)
     private void selectItem(int position) {
 
         FragmentTransaction ft = getFragmentManager().beginTransaction();
-        FrameLayout DFL = (FrameLayout) findViewById(R.id.dynamicFrameLayoutBG);
 
         switch (position) {
 
             case 0:
                 getSupportActionBar().setTitle("");
-                if (Build.VERSION.SDK_INT == Build.VERSION_CODES.LOLLIPOP) {
-
-                    // TODO:
-                    // Different themes
-
-                    getWindow().setNavigationBarColor(getResources().getColor(R.color.navbarcolor));
-                    mToolbar.setBackgroundColor(getResources().getColor(toolbarcolor));
-                    getWindow().setStatusBarColor(getResources().getColor(R.color.statusbarcolor_darker));
-                } else if (Build.VERSION.SDK_INT == Build.VERSION_CODES.KITKAT) {
-                    getSupportActionBar().setTitle("");
-                    DFL.setBackgroundColor(getResources().getColor(R.color.statusbarcolor_darker));
-                }
-
                 ft.replace(R.id.content_frame, demo);
                 break;
 
             case 1:
                 getSupportActionBar().setTitle("Request");
-                if (Build.VERSION.SDK_INT == Build.VERSION_CODES.LOLLIPOP) {
-
-                    // TODO:
-                    // Different themes
-
-                    getWindow().setNavigationBarColor(getResources().getColor(R.color.navbarcolor_request));
-                    mToolbar.setBackgroundColor(getResources().getColor(R.color.toolbarcolor_request));
-                    getWindow().setStatusBarColor(getResources().getColor(R.color.statusbarcolor_request_darker));
-                } else if (Build.VERSION.SDK_INT == Build.VERSION_CODES.KITKAT) {
-                    getSupportActionBar().setTitle("");
-                    mToolbar.setBackgroundColor(getResources().getColor(R.color.toolbarcolor_request));
-                    DFL.setBackgroundColor(getResources().getColor(R.color.statusbarcolor_request_darker));
-                }
                 ft.replace(R.id.content_frame, request);
                 break;
 
             case 2:
-                mDrawerLayout.closeDrawer(mDrawerList);
-                ft.replace(R.id.content_frame, report);
-                getSupportActionBar().setTitle("Report");
-                if (Build.VERSION.SDK_INT == Build.VERSION_CODES.LOLLIPOP) {
-                    getWindow().setNavigationBarColor(getResources().getColor(R.color.navbarcolor_report));
-                    mToolbar.setBackgroundColor(getResources().getColor(R.color.toolbarcolor_report));
-                    getWindow().setStatusBarColor(getResources().getColor(R.color.statusbarcolor_report_darker));
-                } else if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.KITKAT) {
-                    getSupportActionBar().setTitle("");
-                    mToolbar.setBackgroundColor(getResources().getColor(R.color.toolbarcolor_report));
-                    DFL.setBackgroundColor(getResources().getColor(R.color.statusbarcolor_report_darker));
-                }
-                ft.replace(R.id.content_frame, report);
+                Intent ReportABug = new Intent(this, ReportABug.class);
+                startActivity(ReportABug);
                 break;
 
             case 3:
-                getSupportActionBar().setTitle("WebView!");
-                if (Build.VERSION.SDK_INT == Build.VERSION_CODES.LOLLIPOP) {
-
-                    // TODO:
-                    // Different themes
-
-                    getWindow().setNavigationBarColor(getResources().getColor(R.color.navbarcolor));
-                    mToolbar.setBackgroundColor(getResources().getColor(toolbarcolor));
-                    getWindow().setStatusBarColor(getResources().getColor(R.color.statusbarcolor_darker));
-                } else if (Build.VERSION.SDK_INT == Build.VERSION_CODES.KITKAT) {
-                    getSupportActionBar().setTitle("");
-                    mToolbar.setBackgroundColor(getResources().getColor(R.color.toolbarcolor));
-                    DFL.setBackgroundColor(getResources().getColor(R.color.statusbarcolor_darker));
-                }
-                ft.replace(R.id.content_frame, WebViewDemo);
+                Intent wvda = new Intent(this, WebViewDemoActivity.class);
+                startActivity(wvda);
                 break;
 
             case 4:
@@ -311,6 +256,9 @@ public class ToolbarMenudrawer extends ActionBarActivity {
 
                /* Intent about = new Intent(this, About.class);
                 startActivity(about); */
+
+                Toast.makeText(this, "Coming soon. :)", Toast.LENGTH_LONG)
+                        .show();
 
                 break;
 
@@ -371,76 +319,8 @@ public class ToolbarMenudrawer extends ActionBarActivity {
         @Override
         public void onItemClick(AdapterView<?> parent, View view, int position,
                                 long id) {
-
             selectItem(position);
 
-        }
-    }
-
-   @SuppressLint("ValidFragment")
-   public class WebViewFragment extends Fragment {
-        Context context;
-        WebView wv;
-        String google = "https://google.com";
-
-        @SuppressWarnings("deprecation")
-        @Override
-        public View onCreateView(LayoutInflater inflater, ViewGroup container,
-                                 Bundle savedInstanceState) {
-
-            View view = inflater.inflate(R.layout.web_view, container, false);
-            WebView wv = (WebView) view.findViewById(R.id.wv);
-
-        /* Use this to make the webview link convert from Mobile to Desktop. ;)
-
-        wv.getSettings().setUserAgentString("Mozilla/5.0 " +
-                "(Windows NT 6.2; " +
-                "WOW64) AppleWebKit/537.31 " +
-                "(KHTML, like Gecko) Chrome/20 " +
-                "Safari/537.31"); */
-
-            wv.loadUrl(google);
-
-            wv.clearCache(true);
-
-            WebSettings webSettings = wv.getSettings();
-
-            wv.getSettings().setPluginState(WebSettings.PluginState.ON);
-
-            webSettings.setJavaScriptEnabled(true);
-
-            webSettings.setDomStorageEnabled(true);
-
-            wv.setDownloadListener(new DownloadListener() {
-
-                @Override
-                public void onDownloadStart(String url, String userAgent,
-                                            String contentDisposition, String mimetype,
-                                            long contentLength) {
-
-                    Uri uri = Uri.parse(url);
-                    Intent intent = new Intent(Intent.ACTION_VIEW, uri);
-                    startActivity(intent);
-
-                }
-            });
-
-            wv.setWebChromeClient(new WebChromeClient() {
-                public void onProgressChanged(WebView view, int progress) {
-                }
-            });
-
-
-            wv.setWebViewClient(new WebViewClient() {
-
-                public boolean shouldOverrideUrlLoading(WebView view, String url) {
-                    {
-                        view.loadUrl(url);
-                        return true;
-                    }
-                }
-            });
-            return wv;
         }
     }
 }

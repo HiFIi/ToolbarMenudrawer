@@ -4,12 +4,14 @@
     android:layout_width="match_parent"
     android:layout_height="wrap_content"
     android:gravity="center_vertical"
-    android:orientation="horizontal">
+    android:orientation="horizontal"
+    android:paddingBottom="8dp"
+    android:paddingTop="8dp">
 
     <ImageView
         android:id="@+id/iconPicture"
-        android:layout_width="48dp"
-        android:layout_height="48dp"
+        android:layout_width="40dp"
+        android:layout_height="40dp"
         android:layout_alignBottom="@+id/MDText"
         android:layout_alignParentLeft="true"
         android:layout_alignParentTop="true"
@@ -20,17 +22,20 @@
 
     <com.kyler.toolbarmenudrawer.ToolbarMenudrawerTextView
         android:id="@+id/MDText"
-        android:layout_width="match_parent"
+        android:layout_width="fill_parent"
         android:layout_height="wrap_content"
+        android:layout_alignParentTop="true"
+        android:layout_toEndOf="@+id/iconPicture"
+        android:layout_toRightOf="@+id/iconPicture"
         android:ellipsize="marquee"
         android:gravity="center_vertical"
-        android:paddingBottom="20dp"
+        android:padding="16dp"
         android:paddingLeft="72dp"
-        android:paddingTop="22dp"
         android:singleLine="true"
-        android:textColor="#353535"
-        android:textSize="18.0sp"
-        customfontdemo:fontName="Roboto-Regular.ttf"
+        android:textColor="#2B2B2B"
+        android:textSize="14.0sp"
+        android:visibility="visible"
+        customfontdemo:fontName="Roboto-Medium.ttf"
         tools:ignore="RtlSymmetry" />
 
 </RelativeLayout>

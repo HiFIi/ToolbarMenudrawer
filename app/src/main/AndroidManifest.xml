@@ -1,8 +1,8 @@
 <?xml version="1.0" encoding="utf-8"?>
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
     package="com.kyler.toolbarmenudrawer"
-    android:versionCode="59"
-    android:versionName="0.0.4.6">
+    android:versionCode="63"
+    android:versionName="0.0.4.7.7">
 
     <uses-sdk
         android:minSdkVersion="14"
@@ -34,6 +34,18 @@
             android:name="com.kyler.toolbarmenudrawer.activities.About"
             android:label="@string/blank_text"
             android:theme="@style/About.Theme"></activity>
+        <activity
+            android:name="com.kyler.toolbarmenudrawer.activities.BlackAndBlueTest"
+            android:label="@string/blank_text"
+            android:theme="@style/BlackAndBlue.Theme"></activity>
+        <activity
+            android:name="com.kyler.toolbarmenudrawer.activities.WebViewDemoActivity"
+            android:label="@string/blank_text"
+            android:theme="@style/WebViewDemo.Theme"></activity>
+        <activity
+            android:name="com.kyler.toolbarmenudrawer.activities.ReportABug"
+            android:label="@string/blank_text"
+            android:theme="@style/ReportABug.Theme"></activity>
     </application>
 
 </manifest>

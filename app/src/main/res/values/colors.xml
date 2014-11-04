@@ -2,6 +2,10 @@
 <resources>
 
     <color name="background_material_light">#fffafafa</color>
+
+    <!-- 20% Transparency -->
+    <color name="transparent_black_20">#33000000</color>
+
     <color name="teal">#ff009688</color>
     <color name="teal_700">#ff00796b</color>
     <color name="navbarcolor_request">#FF0a7e07</color>
@@ -14,5 +18,15 @@
     <color name="toolbarcolor">#FF303f9f</color>
     <color name="statusbarcolor_darker">#FF1a237e</color>
     <color name="navigation_drawer_item_text">#FF707070</color>
+    <color name="darker">#FF2B2B2B</color>
 
+    <color name="day">#ff0277bd</color>
+    <color name="night">#FF2a36b1</color>
+
+    <color name="fab_color_1">#ff5252</color>
+    <color name="fab_color_1_muted">#ff8080</color>
+    <color name="fab_color_2">#9c27b0</color>
+    <color name="fab_color_2_muted">#a56ab0</color>
+
+    <color name="menudrawer_bg_dark">#FF303030</color>
 </resources>

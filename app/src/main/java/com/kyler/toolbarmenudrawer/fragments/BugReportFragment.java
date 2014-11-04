@@ -8,9 +8,9 @@ import android.view.View;
 import android.view.ViewGroup;
 import android.webkit.WebChromeClient;
 import android.webkit.WebSettings;
+import android.webkit.WebSettings.PluginState;
 import android.webkit.WebView;
 import android.webkit.WebViewClient;
-import android.webkit.WebSettings.PluginState;
 
 import com.kyler.toolbarmenudrawer.R;
 
@@ -52,7 +52,8 @@ public class BugReportFragment extends Fragment {
                     view.loadUrl(url);
                     return true;
                 }
-            }});
+            }
+        });
         return wv;
     }
 }

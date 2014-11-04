@@ -8,26 +8,26 @@
         android:id="@+id/divider"
         android:layout_width="match_parent"
         android:layout_height="2.00dp"
-        android:background="#CCd5d5d5"
-        android:visibility="visible"
-        android:layout_alignParentTop="true"
         android:layout_alignParentLeft="true"
-        android:layout_alignParentStart="true" />
+        android:layout_alignParentStart="true"
+        android:layout_alignParentTop="true"
+        android:background="#CCd5d5d5"
+        android:visibility="visible" />
 
     <com.kyler.toolbarmenudrawer.ToolbarMenudrawerTextView
         android:id="@+id/myTextView1"
         android:layout_width="fill_parent"
         android:layout_height="wrap_content"
-        android:gravity="left"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true"
+        android:layout_below="@+id/divider"
         android:background="@drawable/footer_button_ripple"
+        android:gravity="left"
+        android:paddingBottom="24dp"
+        android:paddingLeft="22dp"
+        android:paddingTop="24dp"
+        android:text="@string/about"
         android:textColor="#ff101010"
         android:textSize="15.0sp"
-        android:paddingTop="24dp"
-        android:paddingBottom="24dp"
-        android:text="@string/about"
-        customfontdemo:fontName="Roboto-Bold.ttf"
-        android:paddingLeft="22dp"
-        android:layout_below="@+id/divider"
-        android:layout_alignParentLeft="true"
-        android:layout_alignParentStart="true" />
+        customfontdemo:fontName="Roboto-Bold.ttf" />
 </RelativeLayout>

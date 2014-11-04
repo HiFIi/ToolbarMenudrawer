@@ -5,8 +5,8 @@
     <string name="blank_text"></string>
     <string name="drawer_open">Open</string>
     <string name="drawer_close">Close</string>
-    <string name="my_name">My name</string>
-    <string name="my_email_demo">Myname@example.com</string>
+    <string name="my_name_demo">My Name</string>
+    <string name="my_email_demo">myname@example.com</string>
     <string name="option_one">Test option 1</string>
     <string name="option_two">Test option 2</string>
     <string name="option_three">Test option 3</string>
