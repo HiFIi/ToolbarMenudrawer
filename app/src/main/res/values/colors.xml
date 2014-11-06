@@ -35,8 +35,9 @@
     <color name="status_bar">#CC000000</color>
 
     <color name="status_bar_10">#1A000000</color>
-
     <color name="status_bar_20">#33000000</color>
+
+    <color name="black_25">#40000000</color>
 
     <color name="menudrawer_bg_dark">#FF303030</color>
 

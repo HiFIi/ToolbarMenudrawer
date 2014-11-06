@@ -29,7 +29,7 @@
         android:layout_toRightOf="@+id/iconPicture"
         android:ellipsize="marquee"
         android:gravity="center_vertical"
-        android:padding="14dp"
+        android:padding="12dp"
         android:paddingLeft="72dp"
         android:singleLine="true"
         android:textColor="#606060"

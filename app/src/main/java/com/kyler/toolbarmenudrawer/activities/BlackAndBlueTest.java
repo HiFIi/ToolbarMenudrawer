@@ -11,6 +11,11 @@ import com.kyler.toolbarmenudrawer.R;
  */
 public class BlackAndBlueTest extends Activity {
 
+    /** This is just a test Activity I created that
+     * basically displays a black theme with a blue StatusBar
+     * @param savedInstanceState
+     */
+
     @SuppressLint("InlinedApi")
     @Override
     protected void onCreate(Bundle savedInstanceState) {

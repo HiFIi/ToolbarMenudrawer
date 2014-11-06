@@ -13,7 +13,6 @@
         <item name="android:windowSharedElementExitTransition">@android:transition/move</item>
         <item name="android:statusBarColor">@color/blue_700</item>
         <item name="android:windowDrawsSystemBarBackgrounds">true</item>
-        <item name="android:windowBackground">@color/blue_700</item>
     </style>
 
     <style name="WhiteTeal.Theme" parent="android:Theme.Material.Light">
@@ -99,13 +98,13 @@
     </style>
 
     <style name="WebViewDemo.Theme" parent="android:Theme.Material">
-        <item name="android:colorPrimary">#5677fc</item>
-        <item name="android:colorPrimaryDark">#5677fc</item>
-        <item name="android:colorAccent">#5677fc</item>
+        <item name="android:colorPrimary">@color/blue_700</item>
+        <item name="android:colorPrimaryDark">@color/blue_800</item>
+        <item name="android:colorAccent">@color/blue_900</item>
         <item name="android:windowContentOverlay">@null</item>
         <item name="android:windowActionBarOverlay">true</item>
-        <item name="android:fitsSystemWindows">false</item>
-        <item name="android:statusBarColor">#5677fc</item>
+        <item name="android:statusBarColor">@color/blue_700</item>
+        <item name="android:windowBackground">@color/blue_700</item>
         <item name="android:windowContentTransitions">true</item>
         <item name="android:windowAllowEnterTransitionOverlap">true</item>
         <item name="android:windowAllowReturnTransitionOverlap">true</item>

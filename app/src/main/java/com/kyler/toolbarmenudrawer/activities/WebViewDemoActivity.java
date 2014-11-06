@@ -3,6 +3,8 @@ package com.kyler.toolbarmenudrawer.activities;
 import android.app.Activity;
 import android.content.Context;
 import android.content.Intent;
+import android.net.ConnectivityManager;
+import android.net.NetworkInfo;
 import android.net.Uri;
 import android.os.Bundle;
 import android.view.KeyEvent;
@@ -116,8 +118,7 @@ public class WebViewDemoActivity extends Activity {
 
             default:
 
-        }
-        ;
+        };
 
         return super.onOptionsItemSelected(item);
     }
