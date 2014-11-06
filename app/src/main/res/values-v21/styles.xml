@@ -1,39 +1,19 @@
 <resources>
 
     <style name="ToolbarMenudrawer.Theme" parent="Theme.AppCompat.NoActionBar">
-        <item name="windowActionModeOverlay">true</item>
-        <item name="android:windowDrawsSystemBarBackgrounds">true</item>
+        <item name="android:colorPrimary">@color/blue_800</item>
+        <item name="android:colorPrimaryDark">@color/blue_900</item>
+        <item name="android:colorAccent">@color/blue_900</item>
         <item name="android:windowTranslucentStatus">true</item>
-        <item name="android:colorPrimary">@color/teal</item>
-        <item name="android:colorPrimaryDark">@color/teal_700</item>
-        <item name="android:colorAccent">@color/teal</item>
-        <item name="colorPrimary">@color/teal</item>
-        <item name="colorPrimaryDark">@color/teal_700</item>
-        <item name="colorAccent">@color/teal</item>
-        <item name="android:windowContentOverlay">@null</item>
-        <item name="android:windowActionBarOverlay">false</item>
-        <item name="android:windowActionBar">false</item>
-        <item name="android:actionBarStyle">@style/ToolbarMenudrawer.Actionbar.Theme</item>
+        <item name="windowActionBar">false</item>
         <item name="android:windowContentTransitions">true</item>
         <item name="android:windowAllowEnterTransitionOverlap">true</item>
         <item name="android:windowAllowReturnTransitionOverlap">true</item>
         <item name="android:windowSharedElementEnterTransition">@android:transition/move</item>
         <item name="android:windowSharedElementExitTransition">@android:transition/move</item>
-        <item name="android:statusBarColor">@android:color/transparent</item>
-    </style>
-
-    <style name="ToolbarMenudrawer.Actionbar.Theme" parent="Widget.AppCompat.Light.ActionBar">
-        <item name="android:background">@color/teal</item>
-        <item name="android:titleTextStyle">
-            @style/ToolbarMenudrawer.ActionBar.TitleTextStyle.Theme
-        </item>
-        <item name="android:height">58.0dip</item>
-        <item name="android:icon">@android:color/transparent</item>
-    </style>
-
-    <style name="ToolbarMenudrawer.ActionBar.TitleTextStyle.Theme" parent="TextAppearance.AppCompat.Widget.ActionBar.Title">
-        <item name="android:textColorHint">@android:color/transparent</item>
-        <item name="android:textColor">@android:color/transparent</item>
+        <item name="android:statusBarColor">@color/blue_700</item>
+        <item name="android:windowDrawsSystemBarBackgrounds">true</item>
+        <item name="android:windowBackground">@color/blue_700</item>
     </style>
 
     <style name="WhiteTeal.Theme" parent="android:Theme.Material.Light">
@@ -135,7 +115,7 @@
 
     <style name="WebViewDemo.Theme.ActionBar.TitleTextStyle" parent="android:TextAppearance.Material.Widget.ActionBar.Title">
         <item name="android:textColorHint">@android:color/transparent</item>
-        <item name="android:textColor">@android:color/transparent</item>
+        <item name="android:textColor">@android:color/white</item>
     </style>
 
     <style name="ReportABug.Theme" parent="android:Theme.Material">

@@ -5,6 +5,7 @@
     android:layout_height="match_parent"
     android:layout_alignParentBottom="true"
     android:layout_alignParentLeft="true"
+    android:background="@color/blue_700"
     android:layout_marginTop="58.0dip">
 
 </WebView>

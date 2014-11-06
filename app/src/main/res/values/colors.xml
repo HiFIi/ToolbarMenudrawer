@@ -20,6 +20,10 @@
     <color name="navigation_drawer_item_text">#FF707070</color>
     <color name="darker">#FF2B2B2B</color>
 
+    <color name="blue_700">#FF1976D2</color>
+    <color name="blue_800">#FF1565C0</color>
+    <color name="blue_900">#FF0D47A1</color>
+
     <color name="day">#ff0277bd</color>
     <color name="night">#FF2a36b1</color>
 
@@ -28,5 +32,18 @@
     <color name="fab_color_2">#9c27b0</color>
     <color name="fab_color_2_muted">#a56ab0</color>
 
+    <color name="status_bar">#CC000000</color>
+
+    <color name="status_bar_10">#1A000000</color>
+
+    <color name="status_bar_20">#33000000</color>
+
     <color name="menudrawer_bg_dark">#FF303030</color>
+
+    <color name="translucent_statusbar_background">#cc3f51b5</color>
+
+    <color name="navdrawer_text_color">#2b2b2b</color>
+    <color name="navdrawer_text_color_selected">@color/night</color>
+    <color name="navdrawer_icon_tint">#888</color>
+    <color name="navdrawer_icon_tint_selected">@color/night</color>
 </resources>

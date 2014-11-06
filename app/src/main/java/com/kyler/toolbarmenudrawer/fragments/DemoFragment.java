@@ -10,6 +10,7 @@ import android.view.View;
 import android.view.ViewGroup;
 import android.view.ViewOutlineProvider;
 import android.widget.ImageButton;
+import android.widget.Toast;
 
 import com.kyler.toolbarmenudrawer.R;
 
@@ -37,6 +38,15 @@ public class DemoFragment extends Fragment {
                 }
             };
             fab.setOutlineProvider(viewOutlineProvider);
+
+            fab.setOnClickListener(new View.OnClickListener() {
+
+                @Override
+                public void onClick(View view) {
+                    Toast.makeText(getActivity(), "You clicked the FAB. :o", Toast.LENGTH_LONG).show();
+                }
+
+            });
         }
 
         return rootView;

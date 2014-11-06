@@ -3,7 +3,7 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:background="#f2f2f2"
-    android:paddingTop="58.0dip">
+    android:paddingTop="72.0dip"  >
 
     <RelativeLayout
         android:layout_width="match_parent"

@@ -4,15 +4,13 @@
     xmlns:app="http://schemas.android.com/apk/res-auto"
     android:id="@+id/drawer_layout"
     android:layout_width="match_parent"
-    android:layout_height="match_parent"
-    app:insetForeground="#ff2d2d2d"
-    android:fitsSystemWindows="true" >
+    android:layout_height="match_parent">
 
     <FrameLayout
         android:id="@+id/content_frame"
         android:layout_width="fill_parent"
-        android:layout_height="fill_parent"
-        android:background="#fff7f7f7">
+        android:layout_height="match_parent"
+        android:background="#fff2f2f2">
 
 
     </FrameLayout>
@@ -26,30 +24,29 @@
             android:id="@+id/toolbar"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:background="?attr/colorPrimary"
+            android:layout_marginTop="25.0dip"
+            android:background="#1976D2"
             android:minHeight="?attr/actionBarSize"
             app:popupTheme="@style/ThemeOverlay.AppCompat.Light"
             app:theme="@style/ThemeOverlay.AppCompat.ActionBar" />
 
     </LinearLayout>
 
-
     <ListView
         android:id="@+id/left_drawer"
-        android:fitsSystemWindows="true"
         android:layout_width="match_parent"
-        android:layout_height="fill_parent"
-        android:layout_gravity="left|start"
-        android:background="#fff9f9f9"
+        android:layout_height="match_parent"
+        android:layout_gravity="start"
+        android:layout_marginRight="72dp"
+        android:background="@android:color/white"
         android:choiceMode="singleChoice"
         android:divider="#00000000"
         android:dividerHeight="1.00dp"
+        android:elevation="2dp"
         android:listSelector="@drawable/ripple"
         android:longClickable="false"
         android:orientation="vertical"
         android:overScrollMode="never"
-        android:scrollbars="none"
-        android:layout_marginRight="72dp"
-        android:drawSelectorOnTop="true" />
+        android:scrollbars="none" />
 
 </android.support.v4.widget.DrawerLayout>

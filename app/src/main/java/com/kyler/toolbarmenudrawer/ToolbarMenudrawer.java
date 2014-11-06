@@ -12,18 +12,17 @@ import android.graphics.drawable.RippleDrawable;
 import android.os.Build;
 import android.os.Bundle;
 import android.preference.PreferenceManager;
-import android.support.v4.view.GravityCompat;
 import android.support.v4.widget.DrawerLayout;
 import android.support.v7.app.ActionBarActivity;
 import android.support.v7.app.ActionBarDrawerToggle;
 import android.support.v7.widget.Toolbar;
-import android.util.TypedValue;
 import android.view.LayoutInflater;
 import android.view.Menu;
 import android.view.MenuInflater;
 import android.view.MenuItem;
 import android.view.View;
 import android.view.ViewGroup;
+import android.view.Window;
 import android.widget.AdapterView;
 import android.widget.FrameLayout;
 import android.widget.ImageView;
@@ -41,12 +40,8 @@ import com.kyler.toolbarmenudrawer.fragments.WebViewFragment;
 import com.kyler.toolbarmenudrawer.ui.Icons;
 
 import java.util.ArrayList;
-import java.util.Calendar;
 
 public class ToolbarMenudrawer extends ActionBarActivity {
-
-    private static int NUMBER_OF_CORES =
-            Runtime.getRuntime().availableProcessors();
     final Context context = this;
     public ImageView iv;
     public RippleDrawable rb;
@@ -56,7 +51,6 @@ public class ToolbarMenudrawer extends ActionBarActivity {
     Fragment report = new BugReportFragment();
     Fragment WebViewDemo = new WebViewFragment();
     FrameLayout fl;
-    int hour = Calendar.getInstance().get(Calendar.HOUR_OF_DAY);
     private DrawerLayout mDrawerLayout;
     private ListView mDrawerList;
     private ActionBarDrawerToggle mDrawerToggle;
@@ -108,11 +102,7 @@ public class ToolbarMenudrawer extends ActionBarActivity {
 
         mDrawerLayout = (DrawerLayout) findViewById(R.id.drawer_layout);
 
-
         mDrawerList = (ListView) findViewById(R.id.left_drawer);
-
-        mDrawerLayout.setDrawerShadow(R.drawable.drawer_shadow,
-                GravityCompat.START);
 
         MDTitles = getResources().getStringArray(
                 R.array.navigation_main_sections);
@@ -140,15 +130,6 @@ public class ToolbarMenudrawer extends ActionBarActivity {
 
         final ViewGroup footer = (ViewGroup) inflater.inflate(R.layout.footer,
                 mDrawerList, false);
-
-        if (Build.VERSION.SDK_INT == Build.VERSION_CODES.LOLLIPOP) {
-
-            TypedValue typedValue = new TypedValue();
-            context.getTheme().resolveAttribute(R.attr.colorPrimary, typedValue, true);
-            final int color = typedValue.data;
-            mDrawerLayout.setStatusBarBackgroundColor(color);
-
-        }
 
         // Give your Toolbar a subtitle!
         /* mToolbar.setSubtitle("Subtitle"); */
@@ -224,7 +205,6 @@ public class ToolbarMenudrawer extends ActionBarActivity {
 
         return super.onOptionsItemSelected(item);
     }
-
     private void selectItem(int position) {
 
         FragmentTransaction ft = getFragmentManager().beginTransaction();

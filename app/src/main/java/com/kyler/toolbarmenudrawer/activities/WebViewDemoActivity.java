@@ -5,6 +5,7 @@ import android.content.Context;
 import android.content.Intent;
 import android.net.Uri;
 import android.os.Bundle;
+import android.view.KeyEvent;
 import android.view.Menu;
 import android.view.MenuInflater;
 import android.view.MenuItem;
@@ -24,6 +25,15 @@ public class WebViewDemoActivity extends Activity {
     WebView wv;
     String google = "https://google.com";
 
+    @Override
+    public void onBackPressed() {
+        if (wv.canGoBack()) {
+            wv.goBack();
+        } else {
+            super.onBackPressed();
+        }
+    }
+
     @SuppressWarnings("deprecation")
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -32,9 +42,11 @@ public class WebViewDemoActivity extends Activity {
 
         setContentView(R.layout.web_view);
 
-        WebView wv = (WebView) findViewById(R.id.wv);
+        wv = (WebView) findViewById(R.id.wv);
 
         getActionBar().setDisplayHomeAsUpEnabled(true);
+
+        getActionBar().setTitle("Webview demo");
 
         /* Use this to make the webview link convert from Mobile to Desktop. ;)
         wv.getSettings().setUserAgentString("Mozilla/5.0 " +

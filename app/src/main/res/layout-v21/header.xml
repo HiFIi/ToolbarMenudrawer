@@ -2,7 +2,7 @@
 <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:customfontdemo="http://schemas.android.com/apk/res-auto"
     android:layout_width="match_parent"
-    android:layout_height="wrap_content" >
+    android:layout_height="wrap_content">
 
     <ImageView
         android:id="@+id/imageView1"
@@ -10,53 +10,53 @@
         android:layout_height="wrap_content"
         android:layout_alignParentRight="false"
         android:layout_alignParentTop="false"
-        android:src="@drawable/header_test"
         android:adjustViewBounds="true"
-        android:tint="#73000000"
-        android:scaleType="centerCrop" />
+        android:fitsSystemWindows="false"
+        android:scaleType="centerCrop"
+        android:src="@drawable/pyramid"
+        android:tint="#73000000" />
 
     <com.pkmmte.view.CircularImageView
         android:id="@+id/circularImageView1"
-        android:layout_width="56dp"
-        android:layout_height="56dp"
-        android:scaleType="centerInside"
-        android:src="@drawable/stock_avatar"
+        android:layout_width="48dp"
+        android:layout_height="48dp"
         android:layout_alignBottom="@+id/imageView1"
         android:layout_alignParentLeft="true"
         android:layout_alignParentStart="true"
-        android:layout_marginBottom="72dp"
-        android:layout_marginLeft="8dp" />
+        android:layout_marginBottom="16dp"
+        android:layout_marginLeft="8dp"
+        android:scaleType="centerInside"
+        android:src="@drawable/ic_person_white" />
 
     <com.kyler.toolbarmenudrawer.ToolbarMenudrawerTextView
         android:id="@+id/myTextView1"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+        android:layout_alignEnd="@+id/myTextView2"
+        android:layout_alignRight="@+id/myTextView2"
+        android:layout_alignTop="@+id/circularImageView1"
+        android:layout_marginLeft="8dp"
+        android:layout_marginTop="6dp"
+        android:layout_toEndOf="@+id/circularImageView1"
+        android:layout_toRightOf="@+id/circularImageView1"
         android:gravity="top"
         android:text="@string/my_name_demo"
         android:textColor="#fffafafa"
         android:textSize="14.0sp"
-        customfontdemo:fontName="Roboto-Medium.ttf"
-        android:layout_toEndOf="@+id/circularImageView1"
-        android:layout_alignTop="@+id/circularImageView1"
-        android:layout_toRightOf="@+id/circularImageView1"
-        android:layout_alignRight="@+id/myTextView2"
-        android:layout_alignEnd="@+id/myTextView2"
-        android:paddingTop="4dp"
-        android:layout_marginLeft="8dp"
-        android:layout_marginTop="4dp" />
+        customfontdemo:fontName="Roboto-Medium.ttf" />
 
     <com.kyler.toolbarmenudrawer.ToolbarMenudrawerTextView
         android:id="@+id/myTextView2"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+        android:layout_below="@+id/myTextView1"
+        android:layout_marginLeft="8dp"
+        android:layout_toEndOf="@+id/circularImageView1"
+        android:layout_toRightOf="@+id/circularImageView1"
         android:text="@string/my_email_demo"
         android:textColor="#ffe5e5e5"
         android:textSize="14.0sp"
-        customfontdemo:fontName="Roboto-Regular.ttf"
-        android:layout_toEndOf="@+id/circularImageView1"
-        android:layout_below="@+id/myTextView1"
-        android:layout_toRightOf="@+id/circularImageView1"
-        android:layout_marginLeft="8dp" />
+        customfontdemo:fontName="Roboto-Regular.ttf" />
 
 
 </RelativeLayout>

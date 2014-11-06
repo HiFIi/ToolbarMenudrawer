@@ -4,7 +4,7 @@
     <dimen name="nav_drawer_width_custom">300dp</dimen>
     <dimen name="fab_elevation">2dp</dimen>
     <dimen name="fab_press_translation_z">2dp</dimen>
-    <dimen name="fab_size">64dp</dimen>
+    <dimen name="fab_size">56dp</dimen>
     <dimen name="fab_size_small">56dp</dimen>
     <dimen name="fab_icon_size">24dp</dimen>
 

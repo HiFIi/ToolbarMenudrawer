@@ -10,8 +10,8 @@
 
     <ImageView
         android:id="@+id/iconPicture"
-        android:layout_width="40dp"
-        android:layout_height="40dp"
+        android:layout_width="36dp"
+        android:layout_height="36dp"
         android:layout_alignBottom="@+id/MDText"
         android:layout_alignParentLeft="true"
         android:layout_alignParentTop="true"
@@ -29,10 +29,10 @@
         android:layout_toRightOf="@+id/iconPicture"
         android:ellipsize="marquee"
         android:gravity="center_vertical"
-        android:padding="16dp"
+        android:padding="14dp"
         android:paddingLeft="72dp"
         android:singleLine="true"
-        android:textColor="#2B2B2B"
+        android:textColor="#606060"
         android:textSize="14.0sp"
         android:visibility="visible"
         customfontdemo:fontName="Roboto-Medium.ttf"
