@@ -1,8 +1,8 @@
 <?xml version="1.0" encoding="utf-8"?>
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
     package="com.kyler.toolbarmenudrawer"
-    android:versionCode="64"
-    android:versionName="0.0.5.0">
+    android:versionCode="66"
+    android:versionName="0.0.5.0.2">
 
     <uses-sdk
         android:minSdkVersion="19"
@@ -46,6 +46,10 @@
             android:name="com.kyler.toolbarmenudrawer.activities.ReportABug"
             android:label="@string/blank_text"
             android:theme="@style/ReportABug.Theme"></activity>
+        <activity
+            android:name="com.kyler.toolbarmenudrawer.activities.InReview"
+            android:label="@string/blank_text"
+            android:theme="@style/InReview.Theme"></activity>
     </application>
 
 </manifest>

@@ -5,12 +5,14 @@
         <item>Submit a request</item>
         <item>Report a bug</item>
         <item>WebView demo</item>
+        <item>InReview</item>
     </string-array>
 
     <array name="drawable_ids">
         <item>@drawable/request</item>
         <item>@drawable/bug_report</item>
         <item>@drawable/web</item>
+        <item>@drawable/in_review</item>
     </array>
 
 </resources>

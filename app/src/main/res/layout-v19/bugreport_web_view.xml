@@ -3,15 +3,14 @@
     android:id="@+id/dynamicFrameLayoutBG"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="@color/toolbarcolor_report">
+    android:background="#bd2e22">
 
     <WebView
         android:id="@+id/bugreport_wv"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
         android:layout_alignParentBottom="true"
-        android:layout_alignParentLeft="true"
-        android:layout_marginTop="48.0dip">
+        android:layout_alignParentLeft="true" >
 
     </WebView>
 </FrameLayout>

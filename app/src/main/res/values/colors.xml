@@ -20,6 +20,10 @@
     <color name="navigation_drawer_item_text">#FF707070</color>
     <color name="darker">#FF2B2B2B</color>
 
+    <color name="green_500">#FF4CAF50</color>
+    <color name="green_700">#FF388E3C</color>
+
+    <color name="blue_600">#FF1E88E5</color>
     <color name="blue_700">#FF1976D2</color>
     <color name="blue_800">#FF1565C0</color>
     <color name="blue_900">#FF0D47A1</color>

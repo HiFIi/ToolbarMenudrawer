@@ -7,6 +7,8 @@
         <item name="android:windowTranslucentNavigation">false</item>
         <item name="android:fitsSystemWindows">true</item>
         <item name="android:actionBarStyle">@style/ToolbarMenudrawer.Actionbar.Theme</item>
+        <item name="android:homeAsUpIndicator">@drawable/ic_arrow_back_white_18dp</item>
+        <item name="homeAsUpIndicator">@drawable/ic_arrow_back_white_18dp</item>
     </style>
 
     <style name="ToolbarMenudrawer.Actionbar.Theme" parent="Widget.AppCompat.Light.ActionBar">
@@ -14,7 +16,7 @@
         <item name="android:titleTextStyle">
             @style/ToolbarMenudrawer.ActionBar.TitleTextStyle.Theme
         </item>
-        <item name="android:height">48.0dip</item>
+        <item name="android:height">58.0dip</item>
         <item name="android:icon">@android:color/transparent</item>
     </style>
 
@@ -40,7 +42,7 @@
         <item name="android:titleTextStyle">
             @style/WhiteTeal.ActionBar.TitleTextStyle.Theme
         </item>
-        <item name="android:height">48.0dip</item>
+        <item name="android:height">58.0dip</item>
         <item name="android:icon">@android:color/transparent</item>
         <item name="android:windowTranslucentStatus">true</item>
         <item name="android:fitsSystemWindows">true</item>
@@ -57,6 +59,8 @@
         <item name="android:fitsSystemWindows">true</item>
         <item name="android:windowTranslucentStatus">true</item>
         <item name="android:actionBarStyle">@style/WebViewDemo.Actionbar.Theme</item>
+        <item name="android:homeAsUpIndicator">@drawable/ic_arrow_back_white_18dp</item>
+        <item name="homeAsUpIndicator">@drawable/ic_arrow_back_white_18dp</item>
     </style>
 
     <style name="WebViewDemo.Actionbar.Theme" parent="android:Widget.Holo.ActionBar">
@@ -85,11 +89,34 @@
         <item name="android:titleTextStyle">
             @style/ReportABug.ActionBar.TitleTextStyle.Theme
         </item>
-        <item name="android:height">48.0dip</item>
+        <item name="android:height">58.0dip</item>
         <item name="android:icon">@android:color/transparent</item>
     </style>
 
     <style name="ReportABug.ActionBar.TitleTextStyle.Theme" parent="android:TextAppearance.Holo.Widget.ActionBar.Title">
+        <item name="android:textColorHint">@android:color/transparent</item>
+        <item name="android:textColor">@android:color/transparent</item>
+    </style>
+
+    <style name="InReview.Theme" parent="android:Theme.Holo.Light.DarkActionBar">
+        <item name="android:windowContentOverlay">@null</item>
+        <item name="android:windowTranslucentStatus">true</item>
+        <item name="android:windowTranslucentNavigation">false</item>
+        <item name="android:fitsSystemWindows">true</item>
+        <item name="android:windowActionBarOverlay">true</item>
+        <item name="android:actionBarStyle">@style/InReview.Actionbar.Theme</item>
+    </style>
+
+    <style name="InReview.Actionbar.Theme" parent="android:Widget.Holo.ActionBar">
+        <item name="android:background">@color/green_500</item>
+        <item name="android:titleTextStyle">
+            @style/ReportABug.ActionBar.TitleTextStyle.Theme
+        </item>
+        <item name="android:height">58.0dip</item>
+        <item name="android:icon">@android:color/transparent</item>
+    </style>
+
+    <style name="InReview.ActionBar.TitleTextStyle.Theme" parent="android:TextAppearance.Holo.Widget.ActionBar.Title">
         <item name="android:textColorHint">@android:color/transparent</item>
         <item name="android:textColor">@android:color/transparent</item>
     </style>

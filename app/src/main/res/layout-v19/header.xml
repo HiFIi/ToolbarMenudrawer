@@ -7,7 +7,7 @@
     <ImageView
         android:id="@+id/imageView1"
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"
+        android:layout_height="175dp"
         android:layout_alignParentRight="false"
         android:layout_alignParentTop="false"
         android:adjustViewBounds="true"

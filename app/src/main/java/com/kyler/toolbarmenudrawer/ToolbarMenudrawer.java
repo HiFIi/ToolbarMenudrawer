@@ -22,7 +22,6 @@ import android.view.MenuInflater;
 import android.view.MenuItem;
 import android.view.View;
 import android.view.ViewGroup;
-import android.view.Window;
 import android.widget.AdapterView;
 import android.widget.FrameLayout;
 import android.widget.ImageView;
@@ -30,6 +29,7 @@ import android.widget.ListView;
 import android.widget.Toast;
 
 import com.kyler.toolbarmenudrawer.activities.FirstRun;
+import com.kyler.toolbarmenudrawer.activities.InReview;
 import com.kyler.toolbarmenudrawer.activities.ReportABug;
 import com.kyler.toolbarmenudrawer.activities.WebViewDemoActivity;
 import com.kyler.toolbarmenudrawer.adapter.ToolbarMenudrawerAdapter;
@@ -116,6 +116,8 @@ public class ToolbarMenudrawer extends ActionBarActivity {
         icons.add(new Icons(MDTitles[1], MDIcons.getResourceId(1, -2)));
 
         icons.add(new Icons(MDTitles[2], MDIcons.getResourceId(2, -3)));
+
+        icons.add(new Icons(MDTitles[3], MDIcons.getResourceId(3, -4)));
 
         MDIcons.recycle();
 
@@ -232,6 +234,11 @@ public class ToolbarMenudrawer extends ActionBarActivity {
                 break;
 
             case 4:
+                Intent ir = new Intent(this, InReview.class);
+                startActivity(ir);
+                break;
+
+            case 5:
                 // Not quite ready yet
 
                /* Intent about = new Intent(this, About.class);
