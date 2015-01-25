@@ -1,8 +1,4 @@
-ToolbarMenudrawer
-=================
+Oh snap!
+========
 
-**Documentation coming soon.**
-
-**Credits coming soon too. For now, I have manually imported the libraries so the developers get the proper credit so I won't get any (undeserved) credit.**
-
-Feel free to [add me on Google+](https://plus.google.com/+KylerJeffrey/) :)
+[ToolbarMenudrawer 2.0 is here](http://goo.gl/J77i3z) :D
